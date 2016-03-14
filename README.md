@@ -1,9 +1,9 @@
 ## Concordia
 
-1.Panjeta Vildana
-2.Puce Amina
-3.Selmanovic Abdullah
-4.Sjenicaku Alen
+1. Panjeta Vildana
+2. Puce Amina
+3. Selmanovic Abdullah
+4. Sjenicaku Alen
 
 **Poliklinika**
 
