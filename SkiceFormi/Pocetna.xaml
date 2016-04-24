@@ -1,0 +1,39 @@
+<Page
+    x:Class="SkiceFormi.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SkiceFormi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="AliceBlue" Margin="0,0,-376,0">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="620" Margin="10,10,0,0" VerticalAlignment="Top" Width="716">
+            <Button x:Name="HelpButton" Content="?" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="677,579,9,9" RenderTransformOrigin="-0.038,0.184"/>
+        </Border>
+        <TextBlock x:Name="NazivTextBlock" TextWrapping="Wrap" Margin="171,99,-171,-99" FontWeight="Bold" FontFamily="MV Boli" FontSize="36" Text="Poliklinika &quot;Concordia&quot;"/>
+        <TextBlock x:Name="AkterTextBlock" HorizontalAlignment="Left" Margin="231,208,0,0" TextWrapping="Wrap" Text="Akter:" VerticalAlignment="Top"/>
+        <ComboBox x:Name="AkterComboBox" HorizontalAlignment="Left" Margin="275,203,0,0" VerticalAlignment="Top" Width="213">
+            <ComboBoxItem IsSelected="True">
+                Administrator
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Doktor
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Blagajnik
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Recepcionista
+            </ComboBoxItem>
+            
+        </ComboBox>
+        <TextBlock x:Name="UserNameTextBlock" HorizontalAlignment="Left" Margin="198,289,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserNameInput" HorizontalAlignment="Left" Margin="275,289,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213"/>
+        <TextBlock x:Name="PassTextBlock" HorizontalAlignment="Left" Margin="198,324,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top"/>
+        <TextBox x:Name="PassInput" HorizontalAlignment="Left" Margin="275,326,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="213" InputScope="Password"/>
+        <Button x:Name="LogInButton" Content="Prijava" HorizontalAlignment="Left" Margin="275,423,0,0" VerticalAlignment="Top" Width="213" FontWeight="Bold"/>
+
+
+    </Grid>
+</Page>
