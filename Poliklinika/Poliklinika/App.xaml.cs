@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Data.Entity;
+using Poliklinika.PoliklinikaBAZA.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -33,6 +35,12 @@ namespace Poliklinika
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var db = new PoliklinikaDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
         }
 
         /// <summary>
