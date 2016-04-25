@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="e9138387-6260-4b62-b6b1-64fa538fccdd"
-    Publisher="CN=user"
+    Name="305948e8-74fa-4764-a1f7-0ea1ad4a85f4"
+    Publisher="CN=vildana"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="e9138387-6260-4b62-b6b1-64fa538fccdd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="305948e8-74fa-4764-a1f7-0ea1ad4a85f4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Poliklinika</DisplayName>
-    <PublisherDisplayName>user</PublisherDisplayName>
+    <PublisherDisplayName>vildana</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
