@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Poliklinika.PoliklinikaMVVM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="poliklinika 'Concordia' " Foreground="Salmon"  FontFamily="Franklin Gothic Medium" TextAlignment="Center"  ></TextBlock>
+            <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" />
+
+            <Border CornerRadius="6"
+                BorderBrush="Salmon"
+                BorderThickness="4"
+                Padding="8">
+                <StackPanel HorizontalAlignment="Center" >
+                    <TextBox Name="imeTB" PlaceholderText="Ime pacijenta"  Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <TextBox Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center"  ></TextBox>
+                    <TextBox Name="odjelTB" PlaceholderText="Odjel" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <Button HorizontalAlignment="Center" Name="provjeriTermineB" Content="Prikazi slobodne termine" Width="500" Margin="0,10,0,0"></Button>
+                    <ListBox>
+                        <ListBoxItem>Ponedjeljak, 12:30</ListBoxItem>
+                        <ListBoxItem>Srijeda, 10:30</ListBoxItem>
+                    </ListBox>
+                    <Button HorizontalAlignment="Center" Name="zakaziPregledB" Content="Zakazi pregled" Width="500" Margin="0,10,0,0" Click="zakaziClick" ></Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

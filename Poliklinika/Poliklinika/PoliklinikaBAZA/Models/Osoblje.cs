@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaBAZA.Models
 {
-    class Osoblje
+   public class Osoblje
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,5 +19,20 @@ namespace Poliklinika.PoliklinikaBAZA.Models
         public float Plata { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
+
+        public Osoblje(string ime, string prezime, DateTime datumRodjenja,  float plata)
+        {
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.DatumRodjenja = datumRodjenja;
+            this.DatumZaposlenja = DateTime.Now;
+            this.Plata = plata;
+            this.Username = prezime + Convert.ToString(OsobljeId);
+            this.Password = Convert.ToString(new Random().Next(10000, 99999));
+        }
+
+        public Osoblje()
+        {
+        }
     }
 }

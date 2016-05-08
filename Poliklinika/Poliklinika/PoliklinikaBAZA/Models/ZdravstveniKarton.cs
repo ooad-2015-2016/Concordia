@@ -17,6 +17,12 @@ namespace Poliklinika.PoliklinikaBAZA.Models
         public string KrvnaGrupa { get; set; }
         public byte[] Slika { get; set; }//slika pacijenta
         public List<String> Pregledi { get; set; }//lista ID-eva pregleda iz baze za Preglede
+
+        public ZdravstveniKarton()
+        {
+            Pregledi = new List<String>();
+        }
     }
+
 }
 

@@ -399,11 +399,8 @@
     <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Amina\.nuget\packages\EntityFramework.Commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.xml">
-      <PackagePath>EntityFramework.Commands.xml</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\heart_pulse-512.png">
+      <PackagePath>heart_pulse-512.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -431,6 +428,12 @@
     <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Amina\Concordia\Poliklinika\Poliklinika\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Amina\.nuget\packages\EntityFramework.Commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.xml">
+      <PackagePath>EntityFramework.Commands.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Amina\.nuget\packages\EntityFramework.Commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.dll">
       <PackagePath>EntityFramework.Commands.dll</PackagePath>

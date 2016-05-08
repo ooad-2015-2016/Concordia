@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.Entity;
 using Poliklinika.PoliklinikaBAZA.Models;
+using Poliklinika.PoliklinikaMVVM.Views;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -54,7 +55,7 @@ namespace Poliklinika
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
 
@@ -83,7 +84,7 @@ namespace Poliklinika
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(PregledView), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

@@ -11,7 +11,7 @@
     <AssemblyName>Poliklinika</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -98,6 +98,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -108,9 +111,46 @@
     <Compile Include="Migrations\PoliklinikaDbContextModelSnapshot.cs" />
     <Compile Include="PoliklinikaBAZA\Models\DefaultPodaci.cs" />
     <Compile Include="PoliklinikaBAZA\Models\Osoblje.cs" />
+    <Compile Include="PoliklinikaBAZA\Models\OstaloOsoblje.cs" />
     <Compile Include="PoliklinikaBAZA\Models\PoliklinikaDbContext.cs" />
     <Compile Include="PoliklinikaBAZA\Models\ZdravstveniKarton.cs" />
     <Compile Include="PoliklinikaBAZA\Views\PictureConverter.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\INavigationService.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\NavigationService.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\RelayCommand.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Doktor.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Odjel.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Pacijent.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Pregled.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Pretraga.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Raspored.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\RegistrovaniPacijent.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\ListaPacijenataViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\PregledViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\PretragaViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\RasporedViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\ZdravstveniKartonViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\Views\KreiranjeKartona.xaml.cs">
+      <DependentUpon>KreiranjeKartona.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\ListaPacijenata.xaml.cs">
+      <DependentUpon>ListaPacijenata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\PregledView.xaml.cs">
+      <DependentUpon>PregledView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\RasporedView.xaml.cs">
+      <DependentUpon>RasporedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\UnosPretrageView.xaml.cs">
+      <DependentUpon>UnosPretrageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\ZakazivanjePregleda.xaml.cs">
+      <DependentUpon>ZakazivanjePregleda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\ZdravstveniKartonView.xaml.cs">
+      <DependentUpon>ZdravstveniKartonView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +160,7 @@
     <None Include="Poliklinika_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="heart_pulse-512.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -134,9 +175,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\KreiranjeKartona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\ListaPacijenata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\PregledView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\RasporedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\UnosPretrageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\ZakazivanjePregleda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\ZdravstveniKartonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup />

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Poliklinika.PoliklinikaMVVM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="poliklinika 'Concordia' " Foreground="Salmon"  FontFamily="Franklin Gothic Medium" TextAlignment="Center"  ></TextBlock>
+            <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" />
+
+            <Border CornerRadius="6"
+                BorderBrush="Salmon"
+                BorderThickness="4"
+                Padding="8">
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock FontWeight="Bold" FontSize="20" >Dermatologija</TextBlock>
+                    <TextBlock Margin="0,10,0,0">Mogući pregledi:</TextBlock>
+                    <ComboBox FontStyle="Italic" ItemsSource="{Binding Path=Odjel.pretrage}"
+ DisplayMemberPath="naziv" SelectedValue="{Binding Path=Stavka, Mode=TwoWay}">
+
+                    </ComboBox>
+                    <Button HorizontalAlignment="Center" Margin="0,10,0,0" Command="{Binding Path=Dodaj}">Unesi pretragu</Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
+
