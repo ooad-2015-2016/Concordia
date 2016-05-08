@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Zatvori" />
     <RootPropertyPathName Name="ime" />
     <RootPropertyPathName Name="PregledKartona" />
     <RootPropertyPathName Name="pacijenti" />
@@ -11,6 +12,7 @@
     <RootPropertyPathName Name="pomoc3" />
     <RootPropertyPathName Name="pomoc2" />
     <RootPropertyPathName Name="pomoc" />
+    <RootPropertyPathName Name="DodavanjeZaposlenika" />
     <RootPropertyPathName Name="naziv" />
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="Odjel" />
@@ -35,6 +37,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetColumn" />
@@ -63,10 +66,13 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
@@ -87,6 +93,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -99,14 +108,22 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Command" />
       <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Command" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Poliklinika.Login" />
     <RootType FullName="Poliklinika.MainPage" />
+    <RootType FullName="Poliklinika.NovcaniPrihodi" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
@@ -127,6 +144,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
       <RootProperty Name="Content" />
@@ -138,11 +159,6 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="SelectedValue" />
       <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Path" />
-      <RootProperty Name="UpdateSourceTrigger" />
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
       <RootProperty Name="Content" />
@@ -176,8 +192,19 @@
     </RootType>
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.PregledView" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RasporedView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView" />
+    <RootType FullName="Poliklinika.StatistickiPodaci" />
+    <RootType FullName="Poliklinika.ZakazaniPregledi" />
   </Roots.RootTypes>
 </Roots>

@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Poliklinika.PoliklinikaMVVM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="-104,0,-106,65">
+        <RelativePanel HorizontalAlignment="Left" Height="601" Margin="119,67,0,-93" VerticalAlignment="Top" Width="441">
+            <TextBlock x:ConnectionId='1' x:Name="textBlock" HorizontalAlignment="Left" Height="43" Margin="0,0,-46.333,-23" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="108"/>
+            <TextBox x:ConnectionId='2' x:Name="textBox" HorizontalAlignment="Left" Height="43" Margin="135,0,-293,-11" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" />
+            <TextBlock x:ConnectionId='3' x:Name="textBlock1" HorizontalAlignment="Left" Height="40" Margin="0,48,-46.333,-68" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="108"/>
+            <TextBox x:ConnectionId='4' x:Name="textBox1" HorizontalAlignment="Left" Height="40" Margin="135,52,-293,-60" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBlock x:ConnectionId='5' x:Name="textBlock2" HorizontalAlignment="Left" Height="34" Margin="0,97,-77.333,-111" TextWrapping="Wrap" Text="Datum zaposlenja" VerticalAlignment="Top" Width="139"/>
+            <TextBlock x:ConnectionId='6' x:Name="textBlock3" HorizontalAlignment="Left" Height="33" Margin="0,133,-68.333,-146" TextWrapping="Wrap" Text="Datum rodjenja" VerticalAlignment="Top" Width="130"/>
+            <TextBlock x:ConnectionId='7' x:Name="textBlock4" HorizontalAlignment="Left" Height="32" Margin="0,192,-41.333,-204" TextWrapping="Wrap" Text="Plata" VerticalAlignment="Top" Width="103"/>
+            <TextBox x:ConnectionId='8' x:Name="textBox4" HorizontalAlignment="Left" Height="25" Margin="135,192,-293,-185" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBlock x:ConnectionId='9' x:Name="textBlock5" HorizontalAlignment="Left" Height="36" Margin="0,229,-41.333,-245" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="103" />
+            <TextBlock x:ConnectionId='10' x:Name="textBlock6" Height="36" Margin="0,270,-103,-286" TextWrapping="Wrap" Text="Odjel" VerticalAlignment="Top"/>
+            <TextBox x:ConnectionId='11' x:Name="textBox5" HorizontalAlignment="Left" Height="36" Margin="135,229,-288,-233" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <TextBox x:ConnectionId='12' x:Name="textBox6" HorizontalAlignment="Left" Height="36" Margin="135,270,-293,-274" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
+            <Button x:ConnectionId='13' x:Name="button" Content="Registruj" Command="{Binding Path=DodavanjeZaposlenika}"                              HorizontalAlignment="Left" Height="37" Margin="187,351,-205.333,-356" VerticalAlignment="Top" Width="83"/>
+            <DatePicker x:ConnectionId='14' HorizontalAlignment="Left" Height="40" Margin="135,134,-31,-142" VerticalAlignment="Top" Width="192"  Name="datumRodj" />
+
+            <DatePicker x:ConnectionId='15' HorizontalAlignment="Left" Height="32" Margin="135,97,-27,-14" VerticalAlignment="Top" Width="244" Name="datumZap"/>
+        </RelativePanel>
+
+    </Grid>
+</Page>
+

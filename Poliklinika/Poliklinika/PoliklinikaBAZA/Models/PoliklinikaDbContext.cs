@@ -14,6 +14,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
       
         public DbSet<Osoblje> Zaposlenici { get; set; }
         public DbSet<ZdravstveniKarton> ZdravstveniKartoni { get; set; }
+        
 
  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

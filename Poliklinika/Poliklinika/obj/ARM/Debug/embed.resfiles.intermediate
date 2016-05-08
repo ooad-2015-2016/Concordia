@@ -1,2 +1,11 @@
 App.xbf
+Login.xbf
 MainPage.xbf
+PoliklinikaMVVM\Views\KreiranjeKartona.xbf
+PoliklinikaMVVM\Views\ListaPacijenata.xbf
+PoliklinikaMVVM\Views\PregledView.xbf
+PoliklinikaMVVM\Views\RasporedView.xbf
+PoliklinikaMVVM\Views\RegistracijaNovogZaposlenika.xbf
+PoliklinikaMVVM\Views\UnosPretrageView.xbf
+PoliklinikaMVVM\Views\ZakazivanjePregleda.xbf
+PoliklinikaMVVM\Views\ZdravstveniKartonView.xbf

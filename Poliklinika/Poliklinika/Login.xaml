@@ -18,8 +18,12 @@ Height="500">
                 <TextBlock x:Name="textBlockConcordia" Foreground="Salmon" TextWrapping="Wrap" Text="Concordia" FontFamily="Impact" FontSize="36" TextAlignment="Center"/>
                 <Image Source="heart_pulse-512.png" AutomationProperties.AccessibilityView="Content" Width="100" Height="100"></Image>
                 <TextBox Name="txtUsername" Foreground="Salmon" PlaceholderText="Korisničko ime" Margin="10,10,10,0"
-Width="150" />                <PasswordBox Name="txtPassword" Foreground="Salmon" PlaceholderText="Šifra" Margin="10,10,10,0"
-Width="150" />                <Button Name="btnLogin"  Margin="220,10,0,0" Click="btnLogin_Click">Prijava</Button>
+Width="150" />
+                <PasswordBox Name="txtPassword" Foreground="Salmon" PlaceholderText="Šifra" Margin="10,10,10,0"
+Width="150" />
+
+                <Button Name="btnLogin"  Margin="220,10,0,0" Click="btnLogin_Click">Prijava</Button>
+
             </StackPanel>
         </Border>
     </Grid>

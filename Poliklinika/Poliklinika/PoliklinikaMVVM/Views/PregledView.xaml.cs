@@ -28,13 +28,15 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         {
             this.InitializeComponent();
             DataContext = new PregledViewModel();
-            NavigationCacheMode = NavigationCacheMode.Required;
+            NavigationCacheMode = NavigationCacheMode.Required;
+
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-        }
+        }
+
     }
 }
 

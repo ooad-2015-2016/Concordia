@@ -28,7 +28,8 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         {
             this.InitializeComponent();
             DataContext = new ListaPacijenataViewModel();
-            NavigationCacheMode = NavigationCacheMode.Required;
+            NavigationCacheMode = NavigationCacheMode.Required;
+
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {

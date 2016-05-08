@@ -27,7 +27,7 @@ namespace PoliklinikaMigrations
 
                     b.Property<string>("Password");
 
-                    b.Property<float>("Plata");
+                    b.Property<double>("Plata");
 
                     b.Property<string>("Prezime");
 

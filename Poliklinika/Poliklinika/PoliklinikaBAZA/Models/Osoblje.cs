@@ -16,7 +16,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
         public string Prezime { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public DateTime DatumZaposlenja { get; set; }
-        public float Plata { get; set; }
+        public double Plata { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
 
@@ -33,6 +33,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
 
         public Osoblje()
         {
+            this.Password = Convert.ToString(new Random().Next(10000, 99999));
         }
     }
 }

@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Poliklinika.PoliklinikaMVVM.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,10,-475,0">
+        <TextBlock x:ConnectionId='1' x:Name="textBlock" HorizontalAlignment="Left" Height="42" Margin="521,0,0,0" TextWrapping="Wrap" Text="Raspored" VerticalAlignment="Top" Width="131"/>
+        <Button x:ConnectionId='2' x:Name="button" Content="Zatvori" HorizontalAlignment="Left" Height="31" Margin="521,449,0,0" VerticalAlignment="Top" Width="131" Command="{Binding Path=Zatvori}"/>
+
+    </Grid>
+</Page>
+
+

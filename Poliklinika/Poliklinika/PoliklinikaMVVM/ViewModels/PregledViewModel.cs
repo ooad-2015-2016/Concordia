@@ -41,6 +41,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
         public void pregledKartona(object parametar)
         {
             NavigationService.Navigate(typeof(ZdravstveniKartonView), new ZdravstveniKartonViewModel(this));
-        }
+        }
+
     }
 }

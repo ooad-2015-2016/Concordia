@@ -9,7 +9,8 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <DataTemplate x:Key="PretragaListTemplate" x:DataType="models:Pretraga">
+        <DataTemplate x:Key="PretragaListTemplate" x:DataType="models:Pretraga">
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
