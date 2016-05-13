@@ -1,1 +1,1 @@
-C:\Users\vildana\Concordia\Poliklinika\Poliklinika\Poliklinika.csproj;x86
+C:\Users\amina\Concordia\Poliklinika\Poliklinika\Poliklinika.csproj;x86
