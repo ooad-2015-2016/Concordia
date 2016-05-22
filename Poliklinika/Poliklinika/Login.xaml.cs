@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Poliklinika.PoliklinikaMVVM.DataSource;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,14 +27,25 @@ namespace Poliklinika
         public Login()
         {
             this.InitializeComponent();
+            var inicijalizacija = new DataSourceMenuMD();
         }
-
+        //asinhrona metoda za provjeru prijave korisnika
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+            var korisnickoIme = txtUsername.Text;
+            var sifra = txtPassword.Password;
+            var korisnik = DataSourceMenuMD.ProvjeraKorisnika(korisnickoIme, sifra);
+            if (korisnik != null && korisnik.KorisnikId > 0)
+            {
+                this.Frame.Navigate(typeof(MainPage), korisnik);
+            }
+            else
+            {
+                var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
 
-            await dialog.ShowAsync();
+                await dialog.ShowAsync();
+            }
         }
     }
-}
+    }

@@ -2,11 +2,15 @@ App.xbf
 Login.xbf
 MainPage.xbf
 NovcaniPrihodi.xbf
+PoliklinikaMVVM\Views\AdministratorMenu.xbf
+PoliklinikaMVVM\Views\BlagajnikMenu.xbf
 PoliklinikaMVVM\Views\DnevniRaspored.xbf
+PoliklinikaMVVM\Views\DoktorMenu.xbf
 PoliklinikaMVVM\Views\KreiranjeKartona.xbf
 PoliklinikaMVVM\Views\ListaPacijenata.xbf
 PoliklinikaMVVM\Views\PregledView.xbf
 PoliklinikaMVVM\Views\RasporedView.xbf
+PoliklinikaMVVM\Views\RecepcionistMenu.xbf
 PoliklinikaMVVM\Views\RegistracijaNovogZaposlenika.xbf
 PoliklinikaMVVM\Views\UnosPretrageView.xbf
 PoliklinikaMVVM\Views\ZakazivanjePregleda.xbf

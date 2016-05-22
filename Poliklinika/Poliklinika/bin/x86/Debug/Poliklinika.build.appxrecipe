@@ -402,6 +402,9 @@
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\heart_pulse-512.png">
       <PackagePath>heart_pulse-512.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\PoliklinikaMVVM\Views\heart_pulse-512.png">
+      <PackagePath>PoliklinikaMVVM\Views\heart_pulse-512.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>

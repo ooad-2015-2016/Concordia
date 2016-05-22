@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-12T18:00:03.333</Modified>
+      <Modified>2016-05-21T14:01:21.864</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Poliklinika.exe">
       <PackagePath>entrypoint\Poliklinika.exe</PackagePath>
-      <Modified>2016-05-12T18:00:02.649</Modified>
+      <Modified>2016-05-21T14:01:21.362</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\.nuget\packages\EntityFramework.Core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -538,6 +538,10 @@
       <PackagePath>heart_pulse-512.png</PackagePath>
       <Modified>2016-05-12T17:35:35.570</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\PoliklinikaMVVM\Views\heart_pulse-512.png">
+      <PackagePath>PoliklinikaMVVM\Views\heart_pulse-512.png</PackagePath>
+      <Modified>2016-05-15T11:23:08.934</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2016-05-12T17:35:26.918</Modified>
@@ -586,7 +590,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Poliklinika.xr.xml">
       <PackagePath>Poliklinika.xr.xml</PackagePath>
-      <Modified>2016-05-12T17:35:36.822</Modified>
+      <Modified>2016-05-21T13:53:05.668</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -594,11 +598,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-05-12T17:50:15.083</Modified>
+      <Modified>2016-05-21T13:53:06.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Core\Poliklinika.exe">
       <PackagePath>Poliklinika.exe</PackagePath>
-      <Modified>2016-05-12T18:00:03.318</Modified>
+      <Modified>2016-05-21T14:01:21.859</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -28,24 +28,24 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         }
 
         private async void dodavanjeZaposlenika(object sender, RoutedEventArgs e)
-        {
+        { 
+
             Osoblje zap = new Osoblje();
-            zap.Ime = textBox.Text;
-            zap.Prezime = textBox1.Text;
-            zap.Plata = double.Parse(textBox4.Text);
-            zap.Username = textBox5.Text;
+            zap.Ime = imeTBZ.Text;
+            zap.Prezime = prezimeTBZ.Text;
+            zap.Plata = float.Parse(plataTBZ.Text);
+            zap.Username = usernameTBZ.Text;
             var dlg = new MessageDialog("Uspješno registrovan zaposlenik!" + "\n" + "Username: " + zap.Username + "\n" + "Password: " + zap.Password
                );
 
             dlg.Commands.Add(new UICommand("Ok", null, "OK"));
             var op = await dlg.ShowAsync();
-
-
+            /*
             using (var db = new PoliklinikaDbContext())
             {
                 db.Zaposlenici.Add(zap);
                 db.SaveChanges();
-            }
+            }*/
 
 
         }

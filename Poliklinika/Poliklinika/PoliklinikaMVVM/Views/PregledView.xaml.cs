@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -35,6 +36,13 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+        }
+
+        private async void zavrsenPregledButton(object sender, RoutedEventArgs e)
+        {
+            var dlg = new MessageDialog("Podaci o pregledu su uneseni u bazu!");
+            dlg.Commands.Add(new UICommand("Ok", null, "OK"));
+            var op = await dlg.ShowAsync();
         }
 
     }

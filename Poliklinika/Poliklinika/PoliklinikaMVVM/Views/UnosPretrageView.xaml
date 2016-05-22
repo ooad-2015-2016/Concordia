@@ -17,7 +17,7 @@
         </Grid.ColumnDefinitions>
         <StackPanel HorizontalAlignment="Center">
             <TextBlock Text="poliklinika 'Concordia' " Foreground="Salmon"  FontFamily="Franklin Gothic Medium" TextAlignment="Center"  ></TextBlock>
-            <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" />
+            <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" Height="16" />
 
             <Border CornerRadius="6"
                 BorderBrush="Salmon"

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Poliklinika.PoliklinikaMVVM.Models;
+using Poliklinika.PoliklinikaMVVM.ViewModels;
+using Poliklinika.PoliklinikaMVVM.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +28,28 @@ namespace Poliklinika
         public MainPage()
         {
             this.InitializeComponent();
+
+           
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            Korisnik korisnik = null;
+            //Dobavljanje korisnika iz parametra budući da je isti sa logina poslan kao parametar
+            if (e.Parameter != null)
+            {
+                korisnik = (Korisnik)e.Parameter;
+            }
+            //Stavke menija koje će se prikazati
+            //dobavljanje svih meni stavki za koje prijavljeni korisnik ima pravo pristupa
+            if (korisnik != null && korisnik.UlogaKorisnika != null)
+            {
+                this.Frame.Navigate(typeof(AdministratorMenu));
+
+            }
+        }
+        //show-hide funkcionalnost menija
+       
     }
 }

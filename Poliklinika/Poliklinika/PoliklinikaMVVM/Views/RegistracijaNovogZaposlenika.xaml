@@ -8,24 +8,34 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="-104,0,-106,65">
-        <RelativePanel HorizontalAlignment="Left" Height="601" Margin="119,67,0,-93" VerticalAlignment="Top" Width="441">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="43" Margin="0,0,-46.333,-23" TextWrapping="Wrap" Text="Ime" VerticalAlignment="Top" Width="108"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="43" Margin="135,0,-293,-11" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229" />
-            <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="40" Margin="0,48,-46.333,-68" TextWrapping="Wrap" Text="Prezime" VerticalAlignment="Top" Width="108"/>
-            <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="40" Margin="135,52,-293,-60" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
-            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="34" Margin="0,97,-77.333,-111" TextWrapping="Wrap" Text="Datum zaposlenja" VerticalAlignment="Top" Width="139"/>
-            <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="33" Margin="0,133,-68.333,-146" TextWrapping="Wrap" Text="Datum rodjenja" VerticalAlignment="Top" Width="130"/>
-            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="32" Margin="0,192,-41.333,-204" TextWrapping="Wrap" Text="Plata" VerticalAlignment="Top" Width="103"/>
-            <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="25" Margin="135,192,-293,-185" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
-            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="36" Margin="0,229,-41.333,-245" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="103" />
-            <TextBlock x:Name="textBlock6" Height="36" Margin="0,270,-103,-286" TextWrapping="Wrap" Text="Odjel" VerticalAlignment="Top"/>
-            <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="36" Margin="135,229,-288,-233" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
-            <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="36" Margin="135,270,-293,-274" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="229"/>
-            <Button x:Name="button" Content="Registruj" Command="{Binding Path=DodavanjeZaposlenika}" Click="dodavanjeZaposlenika" HorizontalAlignment="Left" Height="37" Margin="187,351,-205.333,-356" VerticalAlignment="Top" Width="83"/>
-            <DatePicker HorizontalAlignment="Left" Height="40" Margin="135,134,-31,-142" VerticalAlignment="Top" Width="192"  Name="datumRodj" />
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="poliklinika 'Concordia' " Foreground="Salmon"  FontFamily="Franklin Gothic Medium" TextAlignment="Center"  ></TextBlock>
+            <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" />
+            <Border CornerRadius="6"
+                BorderBrush="Salmon"
+                BorderThickness="4"
+                Padding="8">
+                <StackPanel HorizontalAlignment="Center" >
+                    <TextBox Name="imeTBZ" PlaceholderText="Ime zaposlenika" Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <TextBox Name="prezimeTBZ" PlaceholderText="Prezime zaposlenika" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <TextBlock>Datum rođenja:</TextBlock>
+                    <DatePicker Name="datumRodjenjaPickerZ" Width="500"></DatePicker>
+                    <TextBlock>Datum zaposlenja:</TextBlock>
+                    <DatePicker Name="datumRegistracijePickerZ" Width="500"></DatePicker>
+                    <TextBox Name="plataTBZ" PlaceholderText="Plata zaposlenika" Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <TextBox Name="usernameTBZ" PlaceholderText="Username zaposlenika" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
+                    <ComboBox Name="odjelCBZ" PlaceholderText="Odjel doktora" Margin="0,10,0,0"  Width="500">
+                        <ComboBoxItem>dermatologija</ComboBoxItem>
+                        <ComboBoxItem>porodicna medicina</ComboBoxItem>
+                        <ComboBoxItem>interna medicina</ComboBoxItem>
+                        <ComboBoxItem>ginekologija</ComboBoxItem>
+                        <ComboBoxItem>gastroenterologija</ComboBoxItem>
+                      
+                    </ComboBox>
+                    <Button Name="dodajZaposlenikaB" Content="Dodaj zaposlenika" Width="500" Margin="0,20,0,0" Click="dodavanjeZaposlenika" ></Button>
 
-            <DatePicker HorizontalAlignment="Left" Height="32" Margin="135,97,-27,-14" VerticalAlignment="Top" Width="244" Name="datumZap"/>
-        </RelativePanel>
-
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

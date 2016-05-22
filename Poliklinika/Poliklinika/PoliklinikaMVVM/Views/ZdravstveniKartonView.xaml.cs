@@ -44,5 +44,8 @@ namespace Poliklinika.PoliklinikaMVVM.Views
                 e.Handled = true;
             }
         }
+      
+
+
     }
 }

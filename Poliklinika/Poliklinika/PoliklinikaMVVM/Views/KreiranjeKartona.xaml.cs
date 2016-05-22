@@ -47,6 +47,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             db.Remove(tk);
             db.SaveChanges();*/
 
+
             var dlg = new MessageDialog("Kreiran karton!");
             dlg.Commands.Add(new UICommand("Ok", null, "OK"));
             var op = await dlg.ShowAsync();

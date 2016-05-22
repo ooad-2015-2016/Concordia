@@ -44,7 +44,6 @@
                     <TextBox Name="imeTB" PlaceholderText="Ime pacijenta"  Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding pomoc, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
                     <TextBox Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding pomoc2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
                     <TextBox Name="odjelTB" PlaceholderText="Odjel" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding pomoc3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
-
                     <StackPanel Orientation="Horizontal" >
                         <Button Name="dodajPretraguB" Margin="0,10,0,0" Command="{Binding Path=DodavanjePretrage, UpdateSourceTrigger=PropertyChanged}" Content="Unesi pretragu" Width="245" Height="32" />
                         <Button Name="ucitajKartonB"  Margin="10,10,0,0" Command="{Binding Path=PregledKartona, UpdateSourceTrigger=PropertyChanged}"  Content="Učitaj karton" Width="245" />
@@ -83,7 +82,7 @@
                         </ListView.ItemContainerStyle>
                     </ListView>
 
-                    <Button Name="zavrsenPregledB" Content="Završen pregled" Width="500" ></Button>
+                    <Button Name="zavrsenPregledB" Content="Završen pregled" Click="zavrsenPregledButton" Width="500" ></Button>
                 </StackPanel>
             </Border>
         </StackPanel>

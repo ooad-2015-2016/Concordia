@@ -115,25 +115,41 @@
     <Compile Include="PoliklinikaBAZA\Models\PoliklinikaDbContext.cs" />
     <Compile Include="PoliklinikaBAZA\Models\ZdravstveniKarton.cs" />
     <Compile Include="PoliklinikaBAZA\Views\PictureConverter.cs" />
+    <Compile Include="PoliklinikaMVVM\DataSource\DataSourceMenuMD.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\INavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\NavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\RelayCommand.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Doktor.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Korisnik.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\MeniStavka.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Odjel.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pacijent.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pregled.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pretraga.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Raspored.cs" />
     <Compile Include="PoliklinikaMVVM\Models\RegistrovaniPacijent.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Uloga.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\UlogaKorisnik.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\UlogaMeniStavka.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Zaposlenik.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\DnevniRasporedViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\ListaPacijenataViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\MeniStavkeViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\PregledViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\PretragaViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\RasporedViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\ZdravstveniKartonViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\Views\AdministratorMenu.xaml.cs">
+      <DependentUpon>AdministratorMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\BlagajnikMenu.xaml.cs">
+      <DependentUpon>BlagajnikMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PoliklinikaMVVM\Views\DnevniRaspored.xaml.cs">
       <DependentUpon>DnevniRaspored.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\DoktorMenu.xaml.cs">
+      <DependentUpon>DoktorMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="PoliklinikaMVVM\Views\KreiranjeKartona.xaml.cs">
       <DependentUpon>KreiranjeKartona.xaml</DependentUpon>
@@ -146,6 +162,9 @@
     </Compile>
     <Compile Include="PoliklinikaMVVM\Views\RasporedView.xaml.cs">
       <DependentUpon>RasporedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\RecepcionistMenu.xaml.cs">
+      <DependentUpon>RecepcionistMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="PoliklinikaMVVM\Views\RegistracijaNovogZaposlenika.xaml.cs">
       <DependentUpon>RegistracijaNovogZaposlenika.xaml</DependentUpon>
@@ -171,7 +190,12 @@
     <None Include="Poliklinika_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="heart_pulse-512.png" />
+    <Content Include="heart_pulse-512.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PoliklinikaMVVM\Views\heart_pulse-512.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -198,7 +222,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PoliklinikaMVVM\Views\AdministratorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\BlagajnikMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PoliklinikaMVVM\Views\DnevniRaspored.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\DoktorMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,6 +251,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PoliklinikaMVVM\Views\RasporedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\RecepcionistMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

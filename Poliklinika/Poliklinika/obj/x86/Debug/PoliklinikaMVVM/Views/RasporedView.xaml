@@ -8,13 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+       
         <StackPanel HorizontalAlignment="Center">
             <TextBlock Text="poliklinika 'Concordia' " Foreground="Salmon"  FontFamily="Franklin Gothic Medium" TextAlignment="Center"  ></TextBlock>
             <Image Source="heart_pulse-512.png" Width="25" HorizontalAlignment="Center" />
@@ -25,13 +19,13 @@
                 Padding="8">
                 <StackPanel HorizontalAlignment="Center" >
                     <TextBlock FontWeight="Bold" FontSize="20" Margin="10,0,0,0">Zakazani pregledi</TextBlock>
-                   
-                    <ListBox Margin="0,10,0,0" 
- DisplayMemberPath="ime" ItemsSource="{Binding Path=pacijenti}" SelectedValue="{Binding Path=odabrani,
+
+                    <ListBox Margin="0,10,0,0"  DisplayMemberPath="ime" ItemsSource="{Binding Path=pacijenti}"
+ SelectedValue="{Binding Path=odabrani,
 Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
-                        <ListBoxItem>Proba Proba - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
-                        <ListBoxItem>Proba Proba - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
-                        <ListBoxItem>Proba Proba - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
+                        <ListBoxItem>Pacijent1 - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
+                        <ListBoxItem>Pacijent2 - 08.maj, 2016 - 12:00 - Ginekologija</ListBoxItem>
+                        <ListBoxItem>Pacijent3 - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
                     </ListBox>
                     
                     <Button x:ConnectionId='1' HorizontalAlignment="Center" Name="zatvoriKartonB" Content="Zatvori" Width="500" Margin="0,10,0,0"></Button>
