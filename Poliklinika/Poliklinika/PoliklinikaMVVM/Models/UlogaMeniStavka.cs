@@ -18,6 +18,7 @@ namespace Poliklinika.PoliklinikaMVVM.Models
             this.MeniStavka = meniStavka;
             this.UlogaId = uloga.UlogaId;
             this.MeniStavkaId = meniStavka.MeniStavkaId;
-        }
+        }
+
     }
 }

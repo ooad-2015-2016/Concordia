@@ -135,8 +135,10 @@
     <Compile Include="PoliklinikaMVVM\ViewModels\DnevniRasporedViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\ListaPacijenataViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\MeniStavkeViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\NaplacivanjeViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\PregledViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\PretragaViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\RacunViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\RasporedViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\ZdravstveniKartonViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\Views\AdministratorMenu.xaml.cs">
@@ -157,8 +159,14 @@
     <Compile Include="PoliklinikaMVVM\Views\ListaPacijenata.xaml.cs">
       <DependentUpon>ListaPacijenata.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\NaplacivanjePregleda.xaml.cs">
+      <DependentUpon>NaplacivanjePregleda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PoliklinikaMVVM\Views\PregledView.xaml.cs">
       <DependentUpon>PregledView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikaMVVM\Views\RacunView.xaml.cs">
+      <DependentUpon>RacunView.xaml</DependentUpon>
     </Compile>
     <Compile Include="PoliklinikaMVVM\Views\RasporedView.xaml.cs">
       <DependentUpon>RasporedView.xaml</DependentUpon>
@@ -246,7 +254,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PoliklinikaMVVM\Views\NaplacivanjePregleda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PoliklinikaMVVM\Views\PregledView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PoliklinikaMVVM\Views\RacunView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

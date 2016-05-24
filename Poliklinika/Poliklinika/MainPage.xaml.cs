@@ -28,28 +28,63 @@ namespace Poliklinika
         public MainPage()
         {
             this.InitializeComponent();
-
-           
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             Korisnik korisnik = null;
+            string pom="";
             //Dobavljanje korisnika iz parametra budući da je isti sa logina poslan kao parametar
             if (e.Parameter != null)
             {
                 korisnik = (Korisnik)e.Parameter;
             }
             //Stavke menija koje će se prikazati
+            
             //dobavljanje svih meni stavki za koje prijavljeni korisnik ima pravo pristupa
             if (korisnik != null && korisnik.UlogaKorisnika != null)
             {
-                this.Frame.Navigate(typeof(AdministratorMenu));
+                
+                var stavke = new List<MeniStavkeViewModel>();
+                var ulogeKorisnika = korisnik.UlogaKorisnika.ToList();
+                foreach (var uloga in ulogeKorisnika)
+                {
+                    foreach (var ulogaMeniStavka in uloga.Uloga.UlogaMeniStavke)
+                    {
+                        if (ulogaMeniStavka.Uloga.Naziv == "Administrator") pom = "a";
+                        else if (ulogaMeniStavka.Uloga.Naziv == "Blagajnik") pom = "b";
+                        else if (ulogaMeniStavka.Uloga.Naziv == "Recepcionist") pom = "r";
+                        else if (ulogaMeniStavka.Uloga.Naziv == "Doktor") pom = "d";
 
+                        stavke.Add(MeniStavkeViewModel.SaMeniStavke(ulogaMeniStavka.MeniStavka));
+                    }
+                }
+                //pridruzivanje odabranih stavki menija, listview-u koji prikazuje meni
+               
+            }
+
+            
+            if (pom=="a")
+            {
+                sadrzajPodstranice.Navigate(typeof(AdministratorMenu), null);
+            }
+            else if(pom=="b")
+            {
+                sadrzajPodstranice.Navigate(typeof(BlagajnikMenu), null);
+            }
+            else if (pom == "r")
+            {
+                sadrzajPodstranice.Navigate(typeof(RecepcionistMenu), null);
+            }
+            else if (pom == "d")
+            {
+                sadrzajPodstranice.Navigate(typeof(DoktorMenu), null);
             }
         }
         //show-hide funkcionalnost menija
-       
-    }
+       
+        //Metoda koja na osnovu odabranog menija, poziva podstranicu koja je definisana u meniju
+       
+    }
 }

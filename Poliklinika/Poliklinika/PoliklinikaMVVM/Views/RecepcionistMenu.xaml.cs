@@ -26,5 +26,20 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         {
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ZakazivanjePregleda));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(KreiranjeKartona));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ListaPacijenata));
+        }
     }
 }

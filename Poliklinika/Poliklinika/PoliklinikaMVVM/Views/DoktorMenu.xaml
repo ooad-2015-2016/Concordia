@@ -24,9 +24,9 @@
                 BorderThickness="4"
                 Padding="8">
                 <StackPanel HorizontalAlignment="Center">
-                    <Button Width="500">Unos dijagnoze</Button>
+                    <Button Width="500" Click="Button_Click">Unos dijagnoze</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Dnevni raspored</Button>
+                    <Button Width="500" Click="Button_Click_1">Dnevni raspored</Button>
                     <TextBlock></TextBlock>
                    
 

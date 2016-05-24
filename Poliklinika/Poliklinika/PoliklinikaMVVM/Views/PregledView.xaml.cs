@@ -1,4 +1,5 @@
-﻿using Poliklinika.PoliklinikaMVVM.ViewModels;
+﻿using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,6 +26,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
     /// </summary>
     public sealed partial class PregledView : Page
     {
+        public INavigationService NavigationService { get; set; }
         public PregledView()
         {
             this.InitializeComponent();
@@ -32,10 +34,20 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             NavigationCacheMode = NavigationCacheMode.Required;
 
         }
+        /* protected override void OnNavigatedTo(NavigationEventArgs e)
+         {
+             var currentView = SystemNavigationManager.GetForCurrentView(); //bilo Collapsed
+             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+         }*/
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var currentView = SystemNavigationManager.GetForCurrentView();
-            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            NavigationService = new NavigationService();
+            NavigationService.Navigate(typeof(DoktorMenu));
+
+            var currentView2 = SystemNavigationManager.GetForCurrentView();
+            currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
         }
 
         private async void zavrsenPregledButton(object sender, RoutedEventArgs e)
@@ -43,6 +55,13 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             var dlg = new MessageDialog("Podaci o pregledu su uneseni u bazu!");
             dlg.Commands.Add(new UICommand("Ok", null, "OK"));
             var op = await dlg.ShowAsync();
+
+            imeTB.Text = String.Empty;
+            prezimeTB.Text = String.Empty;
+            odjelTB.Text = String.Empty;
+            PretrageListView.ItemsSource = null;
+            PretrageListView.Items.Clear();
+            Frame.Navigate(typeof(DoktorMenu));
         }
 
     }

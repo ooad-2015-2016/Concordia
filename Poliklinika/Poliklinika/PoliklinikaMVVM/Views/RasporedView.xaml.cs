@@ -35,5 +35,10 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
         }
+
+        private void zatvori_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(DoktorMenu));
+        }
     }
 }

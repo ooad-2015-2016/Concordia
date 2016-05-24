@@ -22,7 +22,19 @@ namespace Poliklinika.PoliklinikaMVVM.DataSource
  new Korisnik()
  {
  KorisnikId=2,
- KorisnickoIme="osnovni",
+ KorisnickoIme="doktor",
+ Sifra="1234"
+ },
+ new Korisnik()
+ {
+ KorisnikId=3,
+ KorisnickoIme="recepcionist",
+ Sifra="1234"
+ },
+ new Korisnik()
+ {
+ KorisnikId=4,
+ KorisnickoIme="blagajnik",
  Sifra="1234"
  }
  };
@@ -55,7 +67,17 @@ Naziv="Administrator",
  new Uloga()
  {
  UlogaId=2,
- Naziv="Registrovani korisnik",
+ Naziv="Doktor",
+ },
+  new Uloga()
+ {
+ UlogaId=3,
+ Naziv="Recepcionist",
+ },
+   new Uloga()
+ {
+ UlogaId=4,
+ Naziv="Blagajnik",
  }
  };
         public static IList<Uloga> DajSveUloge()
@@ -113,8 +135,12 @@ Podstranica = typeof(BlagajnikMenu)
         {
             Korisnik k1 = DajKorisnikaPoId(1);
             Korisnik k2 = DajKorisnikaPoId(2);
+            Korisnik k3 = DajKorisnikaPoId(3);
+            Korisnik k4 = DajKorisnikaPoId(4);
             Uloga u1 = DajUloguPoId(1);
             Uloga u2 = DajUloguPoId(2);
+            Uloga u3 = DajUloguPoId(3);
+            Uloga u4 = DajUloguPoId(4);
             MeniStavka ms1 = DajMeniStavkuPoId(1);
             MeniStavka ms2 = DajMeniStavkuPoId(2);
             MeniStavka ms3 = DajMeniStavkuPoId(3);
@@ -127,6 +153,11 @@ Podstranica = typeof(BlagajnikMenu)
             //Dodavanje stavki ulozi i uloge korisniku 2
             u2.DodajMeniStavkuUlozi(ms4);
             k2.DodajUloguKorisnika(u2);
+
+            u3.DodajMeniStavkuUlozi(ms4);
+            k3.DodajUloguKorisnika(u3);
+            u4.DodajMeniStavkuUlozi(ms4);
+            k4.DodajUloguKorisnika(u4);
         }
         #endregion
     }

@@ -27,11 +27,11 @@
                 <StackPanel HorizontalAlignment="Center">
                     <Button Width="500" Click="Button_Click">Unos novog zaposlenika</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Zakazani pregledi</Button>
+                    <Button Width="500" Click="Button_Click_1">Zakazani pregledi</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Statistički podaci</Button>
+                    <Button Width="500" Click="Button_Click_2">Statistički podaci</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Novčani prihodi</Button>
+                    <Button Width="500" Click="Button_Click_3">Novčani prihodi</Button>
 
                       </StackPanel>
             </Border>

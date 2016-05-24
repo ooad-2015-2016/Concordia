@@ -6,12 +6,16 @@
     <RootPropertyPathName Name="PregledKartona" />
     <RootPropertyPathName Name="pacijenti" />
     <RootPropertyPathName Name="odabrani" />
+    <RootPropertyPathName Name="PlacenRacun" />
+    <RootPropertyPathName Name="PregledRacuna" />
+    <RootPropertyPathName Name="prezime" />
     <RootPropertyPathName Name="Pregled" />
     <RootPropertyPathName Name="pretrage" />
     <RootPropertyPathName Name="DodavanjePretrage" />
     <RootPropertyPathName Name="pomoc3" />
     <RootPropertyPathName Name="pomoc2" />
     <RootPropertyPathName Name="pomoc" />
+    <RootPropertyPathName Name="ZatvoriRacun" />
     <RootPropertyPathName Name="naziv" />
     <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="Odjel" />
@@ -121,6 +125,7 @@
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="Poliklinika.MainPage" />
     <RootType FullName="Poliklinika.NovcaniPrihodi" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.AdministratorMenu" />
@@ -163,6 +168,7 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata" />
+    <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemTemplate" />
@@ -189,6 +195,7 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.PregledView" />
+    <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RacunView" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RasporedView" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika" />

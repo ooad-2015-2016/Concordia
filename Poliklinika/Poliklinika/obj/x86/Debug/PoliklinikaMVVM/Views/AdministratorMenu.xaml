@@ -27,11 +27,11 @@
                 <StackPanel HorizontalAlignment="Center">
                     <Button x:ConnectionId='1' Width="500"                     >Unos novog zaposlenika</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Zakazani pregledi</Button>
+                    <Button x:ConnectionId='2' Width="500"                       >Zakazani pregledi</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Statistički podaci</Button>
+                    <Button x:ConnectionId='3' Width="500"                       >Statistički podaci</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Novčani prihodi</Button>
+                    <Button x:ConnectionId='4' Width="500"                       >Novčani prihodi</Button>
 
                       </StackPanel>
             </Border>

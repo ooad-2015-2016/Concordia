@@ -30,9 +30,10 @@ BaseTextBlockStyle}" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        
-                  
-             
-    </Grid>
+
+
+        <Frame x:Name="sadrzajPodstranice"/>
+
+    </Grid>
+
 </Page>

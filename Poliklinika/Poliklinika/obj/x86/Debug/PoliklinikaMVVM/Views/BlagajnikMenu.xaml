@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -24,9 +25,10 @@
                 BorderThickness="4"
                 Padding="8">
                 <StackPanel HorizontalAlignment="Center">
-                    <Button Width="500">Naplaćivanje pregleda</Button>
+                    <Button x:ConnectionId='1' Width="500"                     >Naplaćivanje pregleda</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Zakazani pregledi</Button>
+                    <Button x:ConnectionId='2' Width="500"                       >Zakazani pregledi</Button>
+                    <TextBlock></TextBlock>
                     
 
                 </StackPanel>

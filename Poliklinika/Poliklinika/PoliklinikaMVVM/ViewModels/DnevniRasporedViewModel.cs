@@ -26,23 +26,29 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
         }
 
-       /* public DnevniRasporedViewModel(ZakazaniPreglediBlagajnik parent)
+        public DnevniRasporedViewModel()
         {
-
             NavigationService = new NavigationService();
             Zatvori = new RelayCommand<object>(zatvoriRaspored, mozeLi);
-            this.parent2 = parent;
-
         }
 
-        public DnevniRasporedViewModel(ZakazaniPreglediRecepcionista parent)
-        {
+        /* public DnevniRasporedViewModel(ZakazaniPreglediBlagajnik parent)
+         {
 
-            NavigationService = new NavigationService();
-            Zatvori = new RelayCommand<object>(zatvoriRaspored, mozeLi);
-            this.parent3 = parent;
+             NavigationService = new NavigationService();
+             Zatvori = new RelayCommand<object>(zatvoriRaspored, mozeLi);
+             this.parent2 = parent;
 
-        }*/
+         }
+
+         public DnevniRasporedViewModel(ZakazaniPreglediRecepcionista parent)
+         {
+
+             NavigationService = new NavigationService();
+             Zatvori = new RelayCommand<object>(zatvoriRaspored, mozeLi);
+             this.parent3 = parent;
+
+         }*/
         public void zatvoriRaspored(object parametar)
         {
             parent1.NavigationService.GoBack();

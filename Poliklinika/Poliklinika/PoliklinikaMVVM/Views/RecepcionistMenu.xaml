@@ -25,11 +25,11 @@
                 BorderThickness="4"
                 Padding="8">
                 <StackPanel HorizontalAlignment="Center">
-                    <Button Width="500">Zakazivanje pregleda</Button>
+                    <Button Width="500" Click="Button_Click">Zakazivanje pregleda</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Kreiranje kartona</Button>
+                    <Button Width="500" Click="Button_Click_1">Kreiranje kartona</Button>
                     <TextBlock></TextBlock>
-                    <Button Width="500">Registrovani pacijenti</Button>
+                    <Button Width="500" Click="Button_Click_2">Registrovani pacijenti</Button>
                     <TextBlock></TextBlock>
 
                 </StackPanel>

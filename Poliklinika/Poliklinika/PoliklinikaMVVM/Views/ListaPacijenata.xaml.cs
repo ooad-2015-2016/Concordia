@@ -1,4 +1,5 @@
-﻿using Poliklinika.PoliklinikaMVVM.ViewModels;
+﻿using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,6 +25,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
     /// </summary>
     public sealed partial class ListaPacijenata : Page
     {
+        public INavigationService NavigationService { get; set; }
         public ListaPacijenata()
         {
             this.InitializeComponent();
@@ -31,10 +33,31 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             NavigationCacheMode = NavigationCacheMode.Required;
 
         }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //var currentView = SystemNavigationManager.GetForCurrentView();
+            //currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed
+
+            NavigationService = new NavigationService();
+            NavigationService.Navigate(typeof(RecepcionistMenu));
+
+            var currentView2 = SystemNavigationManager.GetForCurrentView();
+            currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
+            currentView2.BackRequested += backButton_Tapped;
+        }
+
+        private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+        {
+            Frame.Navigate(typeof(RecepcionistMenu));
+        }
+
+
+        /*protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-        }
+        }*/
     }
 }

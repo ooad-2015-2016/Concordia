@@ -1,4 +1,5 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
+using Poliklinika.PoliklinikaMVVM.Helper;
 using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.Collections.Generic;
@@ -15,17 +16,35 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 {
     public sealed partial class RegistracijaNovogZaposlenika : Page
     {
+        public INavigationService NavigationService { get; set; }
+
         public RegistracijaNovogZaposlenika()
         {
             this.InitializeComponent();
-          
-
         }
+
+       
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            var currentView = SystemNavigationManager.GetForCurrentView();
-            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            //var currentView = SystemNavigationManager.GetForCurrentView();
+            //currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed
+
+            NavigationService = new NavigationService();
+            NavigationService.Navigate(typeof(AdministratorMenu));
+
+            var currentView2 = SystemNavigationManager.GetForCurrentView();
+            currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
+           currentView2.BackRequested += backButton_Tapped;
         }
+
+      private void backButton_Tapped(object sender, BackRequestedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdministratorMenu));
+        }
+
+        
 
         private async void dodavanjeZaposlenika(object sender, RoutedEventArgs e)
         { 

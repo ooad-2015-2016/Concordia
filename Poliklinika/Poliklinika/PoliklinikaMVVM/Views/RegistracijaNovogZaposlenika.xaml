@@ -24,7 +24,9 @@
                     <DatePicker Name="datumRegistracijePickerZ" Width="500"></DatePicker>
                     <TextBox Name="plataTBZ" PlaceholderText="Plata zaposlenika" Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
                     <TextBox Name="usernameTBZ" PlaceholderText="Username zaposlenika" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
-                    <ComboBox Name="odjelCBZ" PlaceholderText="Odjel doktora" Margin="0,10,0,0"  Width="500">
+                    <ComboBox Name="odjelCBZ" PlaceholderText="Odaberi tip zaposlenika" Margin="0,10,0,0"  Width="500">
+                        <ComboBoxItem>blagajnik</ComboBoxItem>
+                        <ComboBoxItem>recepcionist</ComboBoxItem>
                         <ComboBoxItem>dermatologija</ComboBoxItem>
                         <ComboBoxItem>porodicna medicina</ComboBoxItem>
                         <ComboBoxItem>interna medicina</ComboBoxItem>

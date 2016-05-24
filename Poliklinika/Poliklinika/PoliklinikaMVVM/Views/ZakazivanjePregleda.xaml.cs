@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Poliklinika.PoliklinikaMVVM.Helper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -23,10 +25,29 @@ namespace Poliklinika.PoliklinikaMVVM.Views
     /// </summary>
     public sealed partial class ZakazivanjePregleda : Page
     {
+        public INavigationService NavigationService { get; set; }
         public ZakazivanjePregleda()
         {
             this.InitializeComponent();
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //var currentView = SystemNavigationManager.GetForCurrentView();
+            //currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed
+
+            NavigationService = new NavigationService();
+            NavigationService.Navigate(typeof(RecepcionistMenu));
+
+            var currentView2 = SystemNavigationManager.GetForCurrentView();
+            currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
+          
+        }
+
+       
+
+
 
         private async void zakaziClick(object sender, RoutedEventArgs e)
         {

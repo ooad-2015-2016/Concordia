@@ -17,8 +17,10 @@ namespace Poliklinika
         public ZakazaniPregledi()
         {
             this.InitializeComponent();
-            NavigationService = new NavigationService();
-            NavigationService.Navigate(typeof(DnevniRaspored), new DnevniRasporedViewModel(this));
+            DataContext = new DnevniRasporedViewModel();
+
+            // NavigationService = new NavigationService();
+            //NavigationService.Navigate(typeof(DnevniRaspored), new DnevniRasporedViewModel(this));
         }
     }
 }
