@@ -82,7 +82,7 @@
                         </ListView.ItemContainerStyle>
                     </ListView>
 
-                    <Button x:ConnectionId='8' Name="zavrsenPregledB" Content="Završen pregled"                              Width="500" ></Button>
+                    <Button x:ConnectionId='8' Name="zavrsenPregledB" Content="Završen pregled" Command="{Binding Path=ZavrsenPregled, UpdateSourceTrigger=PropertyChanged}" Width="500" ></Button>
                 </StackPanel>
             </Border>
         </StackPanel>

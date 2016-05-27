@@ -20,12 +20,10 @@
                 <StackPanel HorizontalAlignment="Center" >
                     <TextBlock FontWeight="Bold" FontSize="20" Margin="10,0,0,0">Zakazani pregledi</TextBlock>
 
-                    <ListBox Margin="0,10,0,0"  DisplayMemberPath="ime" ItemsSource="{Binding Path=pacijenti}"
+                    <ListBox Margin="0,10,0,0"  ItemsSource="{Binding Path=pregledi}"
  SelectedValue="{Binding Path=odabrani,
 Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
-                        <ListBoxItem>Pacijent1 - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
-                        <ListBoxItem>Pacijent2 - 08.maj, 2016 - 12:00 - Ginekologija</ListBoxItem>
-                        <ListBoxItem>Pacijent3 - 08.maj, 2016 - 12:00 - Dermatologija</ListBoxItem>
+                       
                     </ListBox>
                     
                     <Button x:ConnectionId='1' HorizontalAlignment="Center" Name="zatvoriB"                       Content="Zatvori" Width="500" Margin="0,10,0,0"></Button>

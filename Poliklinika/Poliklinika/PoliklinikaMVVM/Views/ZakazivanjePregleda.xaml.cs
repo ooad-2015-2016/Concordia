@@ -1,4 +1,5 @@
 ﻿using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,9 +30,35 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         public ZakazivanjePregleda()
         {
             this.InitializeComponent();
-        }
+            // var currentView = SystemNavigationManager.GetForCurrentView();
+            //currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            //SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
 
+            DataContext = new ZakazivanjePregledaViewModel();
+            NavigationCacheMode = NavigationCacheMode.Required;
+        }
         protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            //DataContext = (ZakazivanjePregledaViewModel)e.Parameter;
+
+            NavigationService = new NavigationService();
+            NavigationService.Navigate(typeof(RecepcionistMenu));
+
+            var currentView2 = SystemNavigationManager.GetForCurrentView();
+            currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+        }
+
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
+        }
+    }
+
+       /* protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             //var currentView = SystemNavigationManager.GetForCurrentView();
             //currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed
@@ -61,5 +88,5 @@ namespace Poliklinika.PoliklinikaMVVM.Views
                 //nesto
             }
         }
-    }
+    }*/
 }

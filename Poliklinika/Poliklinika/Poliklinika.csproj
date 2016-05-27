@@ -126,6 +126,7 @@
     <Compile Include="PoliklinikaMVVM\Models\Pacijent.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pregled.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pretraga.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\Racun.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Raspored.cs" />
     <Compile Include="PoliklinikaMVVM\Models\RegistrovaniPacijent.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Uloga.cs" />
@@ -140,6 +141,7 @@
     <Compile Include="PoliklinikaMVVM\ViewModels\PretragaViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\RacunViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\RasporedViewModel.cs" />
+    <Compile Include="PoliklinikaMVVM\ViewModels\ZakazivanjePregledaViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\ViewModels\ZdravstveniKartonViewModel.cs" />
     <Compile Include="PoliklinikaMVVM\Views\AdministratorMenu.xaml.cs">
       <DependentUpon>AdministratorMenu.xaml</DependentUpon>

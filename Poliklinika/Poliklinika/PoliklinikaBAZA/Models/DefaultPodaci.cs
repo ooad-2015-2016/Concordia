@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Poliklinika.PoliklinikaMVVM.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +11,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
     {
         public static void Initialize(PoliklinikaDbContext context)
         {
-            if (!context.Zaposlenici.Any())
-            {
-                context.Zaposlenici.AddRange(
-                new Osoblje()
-                {
-                    Ime = "ZaposlenikIme",
-                    Prezime = "ZaposlenikPrezime",
-                    DatumRodjenja = new DateTime(1986, 10, 1),
-                    DatumZaposlenja = new DateTime(2014, 10, 1),
-                    Plata=1000,
-                    Username="zaposlenik1",
-                    Password="zaposlenikPass"
-                }
-                );
-                context.SaveChanges();
-            }
+            
 
             if (!context.ZdravstveniKartoni.Any())
             {
@@ -39,6 +25,8 @@ namespace Poliklinika.PoliklinikaBAZA.Models
                 );
                 context.SaveChanges();
             }
+
+           
 
 
         }

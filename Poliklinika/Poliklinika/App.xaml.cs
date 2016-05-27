@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.Entity;
 using Poliklinika.PoliklinikaBAZA.Models;
+using Poliklinika.PoliklinikaMVVM.Models;
 using Poliklinika.PoliklinikaMVVM.Views;
 using System;
 using System.Collections.Generic;
@@ -42,6 +43,7 @@ namespace Poliklinika
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
+                
             }
         }
 

@@ -7,8 +7,10 @@
     <RootPropertyPathName Name="pacijenti" />
     <RootPropertyPathName Name="odabrani" />
     <RootPropertyPathName Name="PlacenRacun" />
+    <RootPropertyPathName Name="poruka" />
     <RootPropertyPathName Name="PregledRacuna" />
     <RootPropertyPathName Name="prezime" />
+    <RootPropertyPathName Name="ZavrsenPregled" />
     <RootPropertyPathName Name="Pregled" />
     <RootPropertyPathName Name="pretrage" />
     <RootPropertyPathName Name="DodavanjePretrage" />
@@ -16,10 +18,14 @@
     <RootPropertyPathName Name="pomoc2" />
     <RootPropertyPathName Name="pomoc" />
     <RootPropertyPathName Name="ZatvoriRacun" />
+    <RootPropertyPathName Name="stavke" />
+    <RootPropertyPathName Name="pregledi" />
+    <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="naziv" />
     <RootPropertyPathName Name="Dodaj" />
-    <RootPropertyPathName Name="Odjel" />
     <RootPropertyPathName Name="Stavka" />
+    <RootPropertyPathName Name="ZakaziPregled" />
+    <RootPropertyPathName Name="PrikaziTermine" />
     <RootPropertyPathName Name="zatvori" />
     <RootPropertyPathName Name="Karton" />
     <RootPropertyPathName Name="historijaPretraga" />
@@ -143,6 +149,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Items" />
+      <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="DisplayMemberPath" />

@@ -45,13 +45,13 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             var currentView2 = SystemNavigationManager.GetForCurrentView();
             currentView2.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
 
-            currentView2.BackRequested += backButton_Tapped;
+            //currentView2.BackRequested += backButton_Tapped;
         }
-
+        /*
         private void backButton_Tapped(object sender, BackRequestedEventArgs e)
         {
             Frame.Navigate(typeof(RecepcionistMenu));
-        }
+        }*/
 
 
         /*protected override void OnNavigatedTo(NavigationEventArgs e)

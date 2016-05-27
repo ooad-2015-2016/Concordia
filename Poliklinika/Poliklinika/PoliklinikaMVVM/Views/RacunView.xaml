@@ -17,9 +17,7 @@
                 BorderThickness="4"
                 Padding="8">
                 <StackPanel HorizontalAlignment="Center" >
-                    <ListBox>
-                        <ListBoxItem>pretraga1 - 100 KM</ListBoxItem>
-                        <ListBoxItem>pretraga2 - 50 KM</ListBoxItem>
+                    <ListBox ItemsSource="{Binding stavke}">
                     </ListBox>
                     <TextBlock></TextBlock>
                     

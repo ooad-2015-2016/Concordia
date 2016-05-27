@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaMVVM.Models
 {
-    public enum tipOdjela { porodicnaMedicina, dermatologija, internaMedicina, ginekologija, gastroenterologija }
-
+   
     public class Odjel
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int OdjelId { get; set; }
         public string naziv { get; set; }
-        public List<Pretraga> pretrage { get; set; }
-        public Raspored raspored { get; set; }
-        public Doktor doktor { get; set; }
+        
 
         public Odjel()
         {
-            pretrage = new List<Pretraga>();
+           
         }
 
-        public void povuciPretrage()
+     /*   public void povuciPretrage()
         {
             if (naziv.Equals("dermatologija"))
             {
@@ -44,29 +44,24 @@ namespace Poliklinika.PoliklinikaMVVM.Models
 
                 pretrage.Add(p4);
             }
-        }
+        }*/
 
 
 
-        public Odjel(string naziv, List<Pretraga> pretrage, Raspored raspored)
+        public Odjel(string naziv)
         {
             this.naziv = naziv;
-            this.pretrage = pretrage;
-            this.raspored = raspored;
         }
 
-        public void ZaposliDoktora(Doktor d)
-        {
-            this.doktor = d;
-        }
+      
 
-        public bool provjeriTermin(string nazivPacijenta)
+       /* public bool provjeriTermin(string nazivPacijenta)
         {
             foreach (Pregled p in raspored.zakazaniPregledi)
             {
                 if (p.pacijent.dajNaziv().Equals(nazivPacijenta)) return true;
             }
             return false;
-        }
+        }*/
     }
 }

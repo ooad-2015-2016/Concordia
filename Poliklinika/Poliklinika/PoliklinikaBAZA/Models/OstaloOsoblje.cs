@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaBAZA.Models
 {
-    public enum tipZaposlenika { Blagajnik, Recepcionar, Administrator}
     public class OstaloOsoblje : Osoblje
     {
-       public tipZaposlenika tip { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int OstaloOsobljeId { get; set; }
+        public string tip { get; set; }
 
-        public OstaloOsoblje(string ime, string prezime, DateTime datumRodjenja, float plata, tipZaposlenika tip) : base(ime, prezime, datumRodjenja, plata)
+        public OstaloOsoblje()
+        {
+
+        }
+        public OstaloOsoblje(string ime, string prezime, DateTime datumRodjenja, float plata, string tip) : base(ime, prezime, datumRodjenja, plata)
         {
             this.tip = tip;
         }

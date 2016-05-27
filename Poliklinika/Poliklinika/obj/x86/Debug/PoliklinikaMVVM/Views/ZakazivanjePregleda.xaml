@@ -27,12 +27,11 @@
                     <TextBox x:ConnectionId='1' Name="imeTB" PlaceholderText="Ime pacijenta"  Foreground="Salmon" Margin="0,30,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
                     <TextBox x:ConnectionId='2' Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center"  ></TextBox>
                     <TextBox x:ConnectionId='3' Name="odjelTB" PlaceholderText="Odjel" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" ></TextBox>
-                    <Button x:ConnectionId='4' HorizontalAlignment="Center" Name="provjeriTermineB" Content="Prikazi slobodne termine" Width="500" Margin="0,10,0,0"></Button>
-                    <ListBox Width="500">
-                        <ListBoxItem>Ponedjeljak, 12:30</ListBoxItem>
-                        <ListBoxItem>Srijeda, 10:30</ListBoxItem>
+                    <Button x:ConnectionId='4' HorizontalAlignment="Center" Name="provjeriTermineB" Command="{Binding Path=PrikaziTermine, UpdateSourceTrigger=PropertyChanged}" Content="Prikazi slobodne termine" Width="500" Margin="0,10,0,0"></Button>
+                    <ListBox Width="500" ItemsSource="{Binding stavke}" SelectedValue="{Binding Path=odabrani,
+Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                     </ListBox>
-                    <Button x:ConnectionId='5' HorizontalAlignment="Center" Name="zakaziPregledB" Content="Zakazi pregled" Width="500" Margin="0,10,0,0"                     ></Button>
+                    <Button x:ConnectionId='5' HorizontalAlignment="Center" Name="zakaziPregledB" Content="Zakaži pregled" Command="{Binding Path=ZakaziPregled, UpdateSourceTrigger=PropertyChanged}"  Width="500" Margin="0,10,0,0"  ></Button>
                 </StackPanel>
             </Border>
         </StackPanel>

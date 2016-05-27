@@ -1,5 +1,6 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
 using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -54,10 +55,20 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             zk.prezimePacijenta = prezimeTB.Text;
             zk.KrvnaGrupa = krvnaGrupaCB.SelectionBoxItem.ToString();
 
+            Pacijent p = new Pacijent();
+            p.ime = imeTB.Text;
+            p.prezime = prezimeTB.Text;
+            p.datumRodjenja = DateTime.Parse(datumRodjenjaPicker.Date.ToString());
+          
             using (var db = new PoliklinikaDbContext())
             {
-               db.ZdravstveniKartoni.Add(zk);
+               db.Pacijenti.Add(p);
+                db.ZdravstveniKartoni.Add(zk);
                db.SaveChanges();
+
+                var dlg = new MessageDialog("Kreiran karton!");
+                dlg.Commands.Add(new UICommand("Ok", null, "OK"));
+                var op = await dlg.ShowAsync();
             }
 
             //za brisanje kartona
@@ -66,13 +77,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
             db.SaveChanges();*/
 
 
-            var dlg = new MessageDialog("Kreiran karton!");
-            dlg.Commands.Add(new UICommand("Ok", null, "OK"));
-            var op = await dlg.ShowAsync();
-            if ((string)op.Id == "OK")
-            {
-                //nesto
-            }
+           
         }
     }
 }

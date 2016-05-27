@@ -7,22 +7,15 @@ using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaMVVM.Models
 {
-    public class Pretraga
+   public class Racun
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int PretragaId { get; set; }
+        public int RacunId { get; set; }
         public int pregledId { get; set; }
-        public string naziv { get; set; }
         public float cijena { get; set; }
-
-        public Pretraga()
-        {
-
-        }
-        public Pretraga(string naziv, float cijena)
-        {
-            this.naziv = naziv;
-            this.cijena = cijena;
+        public string status { get; set; }
+        public Racun() {
+            status = "nije plaćeno";
         }
     }
 }

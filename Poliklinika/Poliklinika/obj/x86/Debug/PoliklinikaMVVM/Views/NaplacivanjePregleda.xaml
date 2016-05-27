@@ -23,7 +23,7 @@
                     <TextBlock></TextBlock>
                     <Button x:ConnectionId='3' Name="ucitajRacunB"  Margin="10,10,0,0" Width="500" HorizontalAlignment="Center" Command="{Binding Path=PregledRacuna, UpdateSourceTrigger=PropertyChanged}"  Content="Učitaj račun"  />
                     <TextBlock></TextBlock>
-                    <TextBlock> Ukupno za naplatiti : 150 KM</TextBlock>
+                    <TextBlock Text="{Binding poruka, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" > </TextBlock>
                     <Button x:ConnectionId='4' Name="oznaciKaoPlacenB"  Margin="10,10,0,0" Width="500" HorizontalAlignment="Center" Command="{Binding Path=PlacenRacun, UpdateSourceTrigger=PropertyChanged}"  Content="Plaćen račun" />
 
             </StackPanel>

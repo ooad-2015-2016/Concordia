@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Poliklinika.PoliklinikaMVVM.Views
@@ -38,7 +39,8 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 
         private void zatvori_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(DoktorMenu));
+            //Frame.Navigate(typeof(DoktorMenu));
+            Frame.GoBack();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Entity;
+using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,13 +13,19 @@ namespace Poliklinika.PoliklinikaBAZA.Models
     class PoliklinikaDbContext : DbContext
     {
       
-        public DbSet<Osoblje> Zaposlenici { get; set; }
         public DbSet<ZdravstveniKarton> ZdravstveniKartoni { get; set; }
-        
+        public DbSet<Pacijent> Pacijenti { get; set; }
+        public DbSet<RegistrovaniPacijent> RegPacijenti { get; set; }
+        public DbSet<OstaloOsoblje> Zaposlenici { get; set; }
+        public DbSet<Doktor> Doktori { get; set; }
+        public DbSet<Pregled> Pregledi { get; set; }
+        public DbSet<Pretraga> Pretrage { get; set; }
+        public DbSet<Odjel> Odjeli { get; set; }
+        public DbSet<Racun> Racuni { get; set; }
 
- protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "PoliklinikaDB.db";
+            string databaseFilePath = "PoliklinikaConcordiaDB.db";
             try
             {
                databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path,

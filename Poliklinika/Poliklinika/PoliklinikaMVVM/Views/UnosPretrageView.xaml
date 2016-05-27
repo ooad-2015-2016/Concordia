@@ -26,8 +26,8 @@
                 <StackPanel HorizontalAlignment="Center">
                     <TextBlock FontWeight="Bold" FontSize="20" >Dermatologija</TextBlock>
                     <TextBlock Margin="0,10,0,0">Mogući pregledi:</TextBlock>
-                    <ComboBox FontStyle="Italic" ItemsSource="{Binding Path=Odjel.pretrage}"
- DisplayMemberPath="naziv" SelectedValue="{Binding Path=Stavka, Mode=TwoWay}">
+                    <ComboBox FontStyle="Italic" ItemsSource="{Binding Path=pretrage}"
+DisplayMemberPath="naziv"  SelectedValue="{Binding Path=Stavka, Mode=TwoWay}">
 
                     </ComboBox>
                     <Button HorizontalAlignment="Center" Margin="0,10,0,0" Command="{Binding Path=Dodaj}">Unesi pretragu</Button>

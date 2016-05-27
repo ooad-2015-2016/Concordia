@@ -34,7 +34,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(ZakazaniPregledi));
+            this.Frame.Navigate(typeof(RasporedView));
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

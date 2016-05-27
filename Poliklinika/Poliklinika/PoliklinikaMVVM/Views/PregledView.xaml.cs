@@ -1,4 +1,5 @@
 ﻿using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.Models;
 using Poliklinika.PoliklinikaMVVM.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,8 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 
         private async void zavrsenPregledButton(object sender, RoutedEventArgs e)
         {
+
+            
             var dlg = new MessageDialog("Podaci o pregledu su uneseni u bazu!");
             dlg.Commands.Add(new UICommand("Ok", null, "OK"));
             var op = await dlg.ShowAsync();
