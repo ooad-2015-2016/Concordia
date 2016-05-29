@@ -12,9 +12,6 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 {
     class PretragaViewModel
     {
-        // private Type type;
-        //private PregledViewModel pregledViewModel;
-        
         public PregledViewModel Parent { get; set; }
         public Odjel Odjel { get; set; }
         public Pretraga Stavka { get; set; }//za trenutni odabir u combobox
@@ -27,15 +24,22 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
         {
 
             this.Parent = parent;
-            Odjel = new Odjel();
-            Odjel.naziv = parent.pomoc3;
+            // Odjel = new Odjel();
+            //Odjel.naziv = parent.pomoc3;
 
             pretrage = new List<Pretraga>();
 
             //prema nazivu odjela povuci iz bazee sve pretrage
-
-            pretrage.Add(new Pretraga("hemijski piling",123));
-            pretrage.Add(new Pretraga("ciscenje lica",11));
+            if (parent.pomoc3.Equals("dermatologija"))
+            {
+                pretrage.Add(new Pretraga("hemijski piling", 123));
+                pretrage.Add(new Pretraga("ciscenje lica", 11));
+            }
+            else if (parent.pomoc3.Equals("porodicna medicina"))
+            {
+                pretrage.Add(new Pretraga("p1", 123));
+                pretrage.Add(new Pretraga("p2", 11));
+            }
 
             Dodaj = new RelayCommand<object>(dodaj, mozeLiDodati);
             //odabrana stavka sa default komponentom, combobox ce da mjenja Stavka.Komponenta

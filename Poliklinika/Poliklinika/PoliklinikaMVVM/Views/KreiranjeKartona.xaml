@@ -30,7 +30,8 @@
                 <StackPanel HorizontalAlignment="Center" >
                     <TextBox Name="imeTB" PlaceholderText="Ime pacijenta" Foreground="Salmon" Margin="0,30,10,0" Width="500" Text="{Binding ime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
                     <TextBox Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding prezime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
-                    <ComboBox Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" SelectedValue="{Binding krvnaGrupa, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                    <ComboBox Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" SelectedValue="{Binding krvnaGrupa,
+Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
                         <ComboBoxItem>A+</ComboBoxItem>
                         <ComboBoxItem>A-</ComboBoxItem>
                         <ComboBoxItem>B+</ComboBoxItem>

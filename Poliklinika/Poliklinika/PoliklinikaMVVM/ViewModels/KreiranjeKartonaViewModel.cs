@@ -2,8 +2,12 @@
 using Poliklinika.PoliklinikaMVVM.Helper;
 using System;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows.Input;
+using Windows.Graphics.Imaging;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
@@ -57,11 +61,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             zk.prezimePacijenta = prezime;
             zk.KrvnaGrupa = krvnaGrupa.ToString();
 
-            PictureConverter converter = new PictureConverter();
-
-            //zk.Slika=(byte[])converter.Convert(Slika, null,null,null);
-            
-           
+            //slika?? convert iz SoftwareBitmapSource -> byte[]
 
             using (var db = new PoliklinikaDbContext())
             {
