@@ -132,7 +132,7 @@ namespace Poliklinika.Poliklinika_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[23];
+            _typeNameTable = new string[25];
             _typeNameTable[0] = "Poliklinika.Login";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -142,22 +142,24 @@ namespace Poliklinika.Poliklinika_XamlTypeInfo
             _typeNameTable[6] = "Poliklinika.PoliklinikaMVVM.Views.BlagajnikMenu";
             _typeNameTable[7] = "Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored";
             _typeNameTable[8] = "Poliklinika.PoliklinikaMVVM.Views.DoktorMenu";
-            _typeNameTable[9] = "Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona";
-            _typeNameTable[10] = "Poliklinika.PoliklinikaMVVM.Helper.INavigationService";
-            _typeNameTable[11] = "Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata";
-            _typeNameTable[12] = "Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda";
-            _typeNameTable[13] = "Poliklinika.PoliklinikaMVVM.Views.PregledView";
-            _typeNameTable[14] = "Poliklinika.PoliklinikaMVVM.Views.RacunView";
-            _typeNameTable[15] = "Poliklinika.PoliklinikaMVVM.Views.RasporedView";
-            _typeNameTable[16] = "Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu";
-            _typeNameTable[17] = "Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika";
-            _typeNameTable[18] = "Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView";
-            _typeNameTable[19] = "Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda";
-            _typeNameTable[20] = "Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView";
-            _typeNameTable[21] = "Poliklinika.StatistickiPodaci";
-            _typeNameTable[22] = "Poliklinika.ZakazaniPregledi";
+            _typeNameTable[9] = "Poliklinika.PoliklinikaMVVM.Helper.PictureConverter";
+            _typeNameTable[10] = "Object";
+            _typeNameTable[11] = "Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona";
+            _typeNameTable[12] = "Poliklinika.PoliklinikaMVVM.Helper.INavigationService";
+            _typeNameTable[13] = "Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata";
+            _typeNameTable[14] = "Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda";
+            _typeNameTable[15] = "Poliklinika.PoliklinikaMVVM.Views.PregledView";
+            _typeNameTable[16] = "Poliklinika.PoliklinikaMVVM.Views.RacunView";
+            _typeNameTable[17] = "Poliklinika.PoliklinikaMVVM.Views.RasporedView";
+            _typeNameTable[18] = "Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu";
+            _typeNameTable[19] = "Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika";
+            _typeNameTable[20] = "Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView";
+            _typeNameTable[21] = "Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda";
+            _typeNameTable[22] = "Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView";
+            _typeNameTable[23] = "Poliklinika.StatistickiPodaci";
+            _typeNameTable[24] = "Poliklinika.ZakazaniPregledi";
 
-            _typeTable = new global::System.Type[23];
+            _typeTable = new global::System.Type[25];
             _typeTable[0] = typeof(global::Poliklinika.Login);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -167,20 +169,22 @@ namespace Poliklinika.Poliklinika_XamlTypeInfo
             _typeTable[6] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.BlagajnikMenu);
             _typeTable[7] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored);
             _typeTable[8] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.DoktorMenu);
-            _typeTable[9] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona);
-            _typeTable[10] = typeof(global::Poliklinika.PoliklinikaMVVM.Helper.INavigationService);
-            _typeTable[11] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata);
-            _typeTable[12] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda);
-            _typeTable[13] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.PregledView);
-            _typeTable[14] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RacunView);
-            _typeTable[15] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RasporedView);
-            _typeTable[16] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu);
-            _typeTable[17] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika);
-            _typeTable[18] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView);
-            _typeTable[19] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda);
-            _typeTable[20] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView);
-            _typeTable[21] = typeof(global::Poliklinika.StatistickiPodaci);
-            _typeTable[22] = typeof(global::Poliklinika.ZakazaniPregledi);
+            _typeTable[9] = typeof(global::Poliklinika.PoliklinikaMVVM.Helper.PictureConverter);
+            _typeTable[10] = typeof(global::System.Object);
+            _typeTable[11] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona);
+            _typeTable[12] = typeof(global::Poliklinika.PoliklinikaMVVM.Helper.INavigationService);
+            _typeTable[13] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata);
+            _typeTable[14] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda);
+            _typeTable[15] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.PregledView);
+            _typeTable[16] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RacunView);
+            _typeTable[17] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RasporedView);
+            _typeTable[18] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu);
+            _typeTable[19] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika);
+            _typeTable[20] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView);
+            _typeTable[21] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda);
+            _typeTable[22] = typeof(global::Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView);
+            _typeTable[23] = typeof(global::Poliklinika.StatistickiPodaci);
+            _typeTable[24] = typeof(global::Poliklinika.ZakazaniPregledi);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -222,19 +226,20 @@ namespace Poliklinika.Poliklinika_XamlTypeInfo
         private object Activate_6_BlagajnikMenu() { return new global::Poliklinika.PoliklinikaMVVM.Views.BlagajnikMenu(); }
         private object Activate_7_DnevniRaspored() { return new global::Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored(); }
         private object Activate_8_DoktorMenu() { return new global::Poliklinika.PoliklinikaMVVM.Views.DoktorMenu(); }
-        private object Activate_9_KreiranjeKartona() { return new global::Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona(); }
-        private object Activate_11_ListaPacijenata() { return new global::Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata(); }
-        private object Activate_12_NaplacivanjePregleda() { return new global::Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda(); }
-        private object Activate_13_PregledView() { return new global::Poliklinika.PoliklinikaMVVM.Views.PregledView(); }
-        private object Activate_14_RacunView() { return new global::Poliklinika.PoliklinikaMVVM.Views.RacunView(); }
-        private object Activate_15_RasporedView() { return new global::Poliklinika.PoliklinikaMVVM.Views.RasporedView(); }
-        private object Activate_16_RecepcionistMenu() { return new global::Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu(); }
-        private object Activate_17_RegistracijaNovogZaposlenika() { return new global::Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika(); }
-        private object Activate_18_UnosPretrageView() { return new global::Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView(); }
-        private object Activate_19_ZakazivanjePregleda() { return new global::Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda(); }
-        private object Activate_20_ZdravstveniKartonView() { return new global::Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView(); }
-        private object Activate_21_StatistickiPodaci() { return new global::Poliklinika.StatistickiPodaci(); }
-        private object Activate_22_ZakazaniPregledi() { return new global::Poliklinika.ZakazaniPregledi(); }
+        private object Activate_9_PictureConverter() { return new global::Poliklinika.PoliklinikaMVVM.Helper.PictureConverter(); }
+        private object Activate_11_KreiranjeKartona() { return new global::Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona(); }
+        private object Activate_13_ListaPacijenata() { return new global::Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata(); }
+        private object Activate_14_NaplacivanjePregleda() { return new global::Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda(); }
+        private object Activate_15_PregledView() { return new global::Poliklinika.PoliklinikaMVVM.Views.PregledView(); }
+        private object Activate_16_RacunView() { return new global::Poliklinika.PoliklinikaMVVM.Views.RacunView(); }
+        private object Activate_17_RasporedView() { return new global::Poliklinika.PoliklinikaMVVM.Views.RasporedView(); }
+        private object Activate_18_RecepcionistMenu() { return new global::Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu(); }
+        private object Activate_19_RegistracijaNovogZaposlenika() { return new global::Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika(); }
+        private object Activate_20_UnosPretrageView() { return new global::Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView(); }
+        private object Activate_21_ZakazivanjePregleda() { return new global::Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda(); }
+        private object Activate_22_ZdravstveniKartonView() { return new global::Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView(); }
+        private object Activate_23_StatistickiPodaci() { return new global::Poliklinika.StatistickiPodaci(); }
+        private object Activate_24_ZakazaniPregledi() { return new global::Poliklinika.ZakazaniPregledi(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -303,106 +308,117 @@ namespace Poliklinika.Poliklinika_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona
+            case 9:   //  Poliklinika.PoliklinikaMVVM.Helper.PictureConverter
+                userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_9_PictureConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  Object
+                xamlType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_KreiranjeKartona;
+                userType.Activator = Activate_11_KreiranjeKartona;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Poliklinika.PoliklinikaMVVM.Helper.INavigationService
+            case 12:   //  Poliklinika.PoliklinikaMVVM.Helper.INavigationService
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata
+            case 13:   //  Poliklinika.PoliklinikaMVVM.Views.ListaPacijenata
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_ListaPacijenata;
+                userType.Activator = Activate_13_ListaPacijenata;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda
+            case 14:   //  Poliklinika.PoliklinikaMVVM.Views.NaplacivanjePregleda
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_NaplacivanjePregleda;
+                userType.Activator = Activate_14_NaplacivanjePregleda;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Poliklinika.PoliklinikaMVVM.Views.PregledView
+            case 15:   //  Poliklinika.PoliklinikaMVVM.Views.PregledView
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_PregledView;
+                userType.Activator = Activate_15_PregledView;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Poliklinika.PoliklinikaMVVM.Views.RacunView
+            case 16:   //  Poliklinika.PoliklinikaMVVM.Views.RacunView
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_RacunView;
+                userType.Activator = Activate_16_RacunView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Poliklinika.PoliklinikaMVVM.Views.RasporedView
+            case 17:   //  Poliklinika.PoliklinikaMVVM.Views.RasporedView
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_RasporedView;
+                userType.Activator = Activate_17_RasporedView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu
+            case 18:   //  Poliklinika.PoliklinikaMVVM.Views.RecepcionistMenu
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_RecepcionistMenu;
+                userType.Activator = Activate_18_RecepcionistMenu;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika
+            case 19:   //  Poliklinika.PoliklinikaMVVM.Views.RegistracijaNovogZaposlenika
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_RegistracijaNovogZaposlenika;
+                userType.Activator = Activate_19_RegistracijaNovogZaposlenika;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView
+            case 20:   //  Poliklinika.PoliklinikaMVVM.Views.UnosPretrageView
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_18_UnosPretrageView;
+                userType.Activator = Activate_20_UnosPretrageView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 19:   //  Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda
+            case 21:   //  Poliklinika.PoliklinikaMVVM.Views.ZakazivanjePregleda
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_19_ZakazivanjePregleda;
+                userType.Activator = Activate_21_ZakazivanjePregleda;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView
+            case 22:   //  Poliklinika.PoliklinikaMVVM.Views.ZdravstveniKartonView
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_20_ZdravstveniKartonView;
+                userType.Activator = Activate_22_ZdravstveniKartonView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 21:   //  Poliklinika.StatistickiPodaci
+            case 23:   //  Poliklinika.StatistickiPodaci
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_StatistickiPodaci;
+                userType.Activator = Activate_23_StatistickiPodaci;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  Poliklinika.ZakazaniPregledi
+            case 24:   //  Poliklinika.ZakazaniPregledi
                 userType = new global::Poliklinika.Poliklinika_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_ZakazaniPregledi;
+                userType.Activator = Activate_24_ZakazaniPregledi;
                 userType.AddMemberName("NavigationService");
                 userType.SetIsLocalType();
                 xamlType = userType;

@@ -1,6 +1,7 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
 using Poliklinika.PoliklinikaMVVM.Helper;
 using Poliklinika.PoliklinikaMVVM.Models;
+using Poliklinika.PoliklinikaMVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,9 +29,13 @@ namespace Poliklinika.PoliklinikaMVVM.Views
     public sealed partial class KreiranjeKartona : Page
     {
         public INavigationService NavigationService { get; set; }
+        KreiranjeKartonaViewModel kreiranjeKartonaViewModel;
         public KreiranjeKartona()
         {
             this.InitializeComponent();
+            
+            kreiranjeKartonaViewModel = new KreiranjeKartonaViewModel(PreviewControl);
+            this.DataContext = kreiranjeKartonaViewModel;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

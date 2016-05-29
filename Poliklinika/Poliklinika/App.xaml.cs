@@ -43,7 +43,12 @@ namespace Poliklinika
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
-                
+
+                /*brisala po id-u
+                var customer = db.Zaposlenici.First(c => c.OstaloOsobljeId == 5);
+                db.Remove(customer);
+                db.SaveChanges();*/
+
             }
         }
 

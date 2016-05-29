@@ -26,7 +26,22 @@ namespace Poliklinika.PoliklinikaBAZA.Models
                 context.SaveChanges();
             }
 
-           
+            if (!context.Zaposlenici.Any())
+            {
+                context.Zaposlenici.AddRange(
+                new OstaloOsoblje()
+                {
+                    Ime="Admin",
+                    Prezime="Admin",
+                    Username="admin",
+                    Password="1234"
+
+                }
+                );
+                context.SaveChanges();
+            }
+
+
 
 
         }

@@ -1,4 +1,5 @@
-﻿using Poliklinika.PoliklinikaMVVM.Helper;
+﻿using Poliklinika.PoliklinikaBAZA.Models;
+using Poliklinika.PoliklinikaMVVM.Helper;
 using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
         public string ime { get; set; }
         public string prezime { get; set; }
+        public string odjel { get; set; }
 
         public ZakazivanjePregledaViewModel()
         {
@@ -42,7 +44,38 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
         public void zakaziPregled(object parametar)
         {
+            Pregled p = new Pregled();
+            int id = 0;
+            int oId = 0;
 
+            using (var db = new PoliklinikaDbContext())
+            {
+                foreach(Pacijent k in db.Pacijenti)
+                {
+                    if (k.ime.Equals(ime) && k.prezime.Equals(prezime)) id = k.PacijentId;
+                }
+                /*foreach (RegistrovaniPacijent k in db.RegPacijenti)
+                {
+                    if (k.ime.Equals(ime) && k.prezime.Equals(prezime)) id = k.RegPacijentId;  
+                }*/
+
+                foreach(Odjel o in db.Odjeli)
+                {
+                    if (o.naziv.Equals(odjel)) oId = o.OdjelId;
+                }
+              
+
+            }
+            p.pacijentId = id;
+            p.status = "na čekanju";
+            p.termin = DateTime.Now; // da proradi samo hh
+            p.odjelId = oId;
+
+            using (var d = new PoliklinikaDbContext())
+            {
+                d.Pregledi.Add(p);
+                d.SaveChanges();
+            }
             /*
              * 
             //odabrani datum parse DateTime 

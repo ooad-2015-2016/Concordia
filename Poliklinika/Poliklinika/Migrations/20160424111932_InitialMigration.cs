@@ -13,6 +13,7 @@ namespace PoliklinikaMigrations
                 name: "OstaloOsoblje",
                 columns: table => new
                 {
+                   
                     OstaloOsobljeId = table.Column(type: "INTEGER", nullable: false),
                        // .Annotation("Sqlite:Autoincrement", true),
                     DatumRodjenja = table.Column(type: "TEXT", nullable: false),

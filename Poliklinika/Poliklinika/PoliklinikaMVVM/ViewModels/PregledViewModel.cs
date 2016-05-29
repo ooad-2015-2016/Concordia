@@ -55,7 +55,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
                 foreach (Pregled k in db.Pregledi)
                 {
-                    if (k.pacijentId.Equals(Pid) && k.status.Equals("na čekan"))
+                    if (k.pacijentId.Equals(Pid) && k.status.Equals("na čekanj"))
                     {
                         prId = k.PregledId;
                     }

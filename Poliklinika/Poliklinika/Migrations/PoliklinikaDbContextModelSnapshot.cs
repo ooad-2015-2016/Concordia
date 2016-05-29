@@ -16,6 +16,8 @@ namespace PoliklinikaMigrations
 
             builder.Entity("Poliklinika.PoliklinikaBAZA.Models.OstaloOsoblje", b =>
                 {
+                   
+
                     b.Property<int>("OstaloOsobljeId")
                         .ValueGeneratedOnAdd();
 
@@ -39,6 +41,8 @@ namespace PoliklinikaMigrations
 
             builder.Entity("Poliklinika.PoliklinikaMVVM.Models.Doktor", b =>
             {
+               
+
                 b.Property<int>("DoktorId")
                     .ValueGeneratedOnAdd();
 

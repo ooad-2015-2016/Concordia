@@ -10,8 +10,8 @@ namespace Poliklinika.PoliklinikaBAZA.Models
    public class Osoblje
     {
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int OsobljeId { get; set; }//primary key u bazi
+       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //public int OsobljeId { get; set; }//primary key u bazi
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public DateTime DatumRodjenja { get; set; }
@@ -27,7 +27,6 @@ namespace Poliklinika.PoliklinikaBAZA.Models
             this.DatumRodjenja = datumRodjenja;
             this.DatumZaposlenja = DateTime.Now;
             this.Plata = plata;
-            this.Username = prezime + Convert.ToString(OsobljeId);
             this.Password = Convert.ToString(new Random().Next(10000, 99999));
         }
 

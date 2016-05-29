@@ -26,25 +26,35 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             NavigationService = new NavigationService();
             PregledKartona = new RelayCommand<object>(pregledKartona, mozeLi);
 
-            // pročita iz tabele pregleda koja još nije kreirana
+            // pročita iz tabele pregleda
 
             pregledi = new List<string>();
             using (var db = new PoliklinikaDbContext())
             {
-               foreach(Pregled p in db.Pregledi)
+                foreach (Pregled p in db.Pregledi)
                 {
-                    string s;
-                    s = p.termin.ToString();
+                    if (!(p.status.Equals("obavljen"))){
+                        string s;
+                        s = p.termin.Date.ToString();
 
-                    foreach(Pacijent k in db.Pacijenti)
-                    {
-                        if (p.pacijentId.Equals(k.PacijentId))
+                        foreach (Pacijent k in db.Pacijenti)
                         {
-                            s += (" - "+k.ime+" "+k.prezime);
+                            if (p.pacijentId.Equals(k.PacijentId))
+                            {
+                                s += (" - " + k.ime + " " + k.prezime);
+                            }
                         }
-                    }
 
-                    pregledi.Add(s);
+                        foreach (Odjel o in db.Odjeli)
+                        {
+                            if (o.OdjelId.Equals(p.odjelId))
+                            {
+                                s += (" - " + o.naziv);
+                            }
+                        }
+
+                        pregledi.Add(s);
+                    }
                 }
             }
 

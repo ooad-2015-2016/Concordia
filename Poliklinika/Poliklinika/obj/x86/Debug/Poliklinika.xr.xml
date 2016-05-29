@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Zatvori" />
+    <RootPropertyPathName Name="Dodaj" />
+    <RootPropertyPathName Name="Uslikaj" />
+    <RootPropertyPathName Name="Slika" />
+    <RootPropertyPathName Name="Camera" />
+    <RootPropertyPathName Name="MediaCapture" />
+    <RootPropertyPathName Name="krvnaGrupa" />
+    <RootPropertyPathName Name="prezime" />
     <RootPropertyPathName Name="ime" />
     <RootPropertyPathName Name="PregledKartona" />
     <RootPropertyPathName Name="pacijenti" />
@@ -9,7 +19,6 @@
     <RootPropertyPathName Name="PlacenRacun" />
     <RootPropertyPathName Name="poruka" />
     <RootPropertyPathName Name="PregledRacuna" />
-    <RootPropertyPathName Name="prezime" />
     <RootPropertyPathName Name="ZavrsenPregled" />
     <RootPropertyPathName Name="Pregled" />
     <RootPropertyPathName Name="pretrage" />
@@ -22,10 +31,10 @@
     <RootPropertyPathName Name="pregledi" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="naziv" />
-    <RootPropertyPathName Name="Dodaj" />
     <RootPropertyPathName Name="Stavka" />
     <RootPropertyPathName Name="ZakaziPregled" />
     <RootPropertyPathName Name="PrikaziTermine" />
+    <RootPropertyPathName Name="odjel" />
     <RootPropertyPathName Name="zatvori" />
     <RootPropertyPathName Name="Karton" />
     <RootPropertyPathName Name="historijaPretraga" />
@@ -88,6 +97,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
       <RootMethod Name="GetAccessibilityView" />
@@ -99,8 +111,8 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
@@ -138,26 +150,34 @@
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.BlagajnikMenu" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
-      <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.DnevniRaspored" />
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.DoktorMenu" />
+    <RootType FullName="Poliklinika.PoliklinikaMVVM.Helper.PictureConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="SelectedValue" />
       <RootProperty Name="Items" />
       <RootProperty Name="SelectedValuePath" />
       <RootProperty Name="FontStyle" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="DisplayMemberPath" />
-      <RootProperty Name="SelectedValue" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CaptureElement">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBoxItem">
       <RootProperty Name="Content" />

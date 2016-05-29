@@ -1,4 +1,5 @@
-﻿using Poliklinika.PoliklinikaMVVM.Models;
+﻿using Poliklinika.PoliklinikaBAZA.Models;
+using Poliklinika.PoliklinikaMVVM.Models;
 using Poliklinika.PoliklinikaMVVM.ViewModels;
 using Poliklinika.PoliklinikaMVVM.Views;
 using System;
@@ -64,23 +65,27 @@ namespace Poliklinika
                
             }
 
-            
-            if (pom=="a")
+            using (var db = new PoliklinikaDbContext())
             {
-                sadrzajPodstranice.Navigate(typeof(AdministratorMenu), null);
+                //
             }
-            else if(pom=="b")
-            {
-                sadrzajPodstranice.Navigate(typeof(BlagajnikMenu), null);
-            }
-            else if (pom == "r")
-            {
-                sadrzajPodstranice.Navigate(typeof(RecepcionistMenu), null);
-            }
-            else if (pom == "d")
-            {
-                sadrzajPodstranice.Navigate(typeof(DoktorMenu), null);
-            }
+
+                if (pom == "a")
+                {
+                    sadrzajPodstranice.Navigate(typeof(AdministratorMenu), null);
+                }
+                else if (pom == "b")
+                {
+                    sadrzajPodstranice.Navigate(typeof(BlagajnikMenu), null);
+                }
+                else if (pom == "r")
+                {
+                    sadrzajPodstranice.Navigate(typeof(RecepcionistMenu), null);
+                }
+                else if (pom == "d")
+                {
+                    sadrzajPodstranice.Navigate(typeof(DoktorMenu), null);
+                }
         }
         //show-hide funkcionalnost menija
        
