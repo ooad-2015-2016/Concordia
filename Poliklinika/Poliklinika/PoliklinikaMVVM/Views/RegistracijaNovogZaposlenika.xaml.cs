@@ -57,6 +57,8 @@ namespace Poliklinika.PoliklinikaMVVM.Views
                 zap.Ime = imeTBZ.Text;
                 zap.Prezime = prezimeTBZ.Text;
                 zap.Plata = float.Parse(plataTBZ.Text);
+                zap.DatumRodjenja = datumRodjenjaPickerZ.Date.Date;
+                zap.DatumZaposlenja = datumRegistracijePickerZ.Date.Date;
                 zap.Username = usernameTBZ.Text;
                 zap.tip = odabrano;
 

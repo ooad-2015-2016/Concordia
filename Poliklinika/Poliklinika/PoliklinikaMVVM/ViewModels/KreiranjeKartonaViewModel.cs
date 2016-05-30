@@ -1,5 +1,6 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
 using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.ComponentModel;
 using System.IO;
@@ -8,6 +9,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Windows.Input;
 using Windows.Graphics.Imaging;
 using Windows.Storage.Streams;
+using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
@@ -56,18 +58,37 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
         public async void dodaj(object parametar)
         {
-            ZdravstveniKarton zk = new ZdravstveniKarton();
+            if (ime == "" || prezime == "" || krvnaGrupa == null)
+            {
+                var dialog1 = new MessageDialog("Nisu uneseni svi podaci", "Poliklinika Concordia");
+
+                await dialog1.ShowAsync();
+            }
+            else
+            {
+                ZdravstveniKarton zk = new ZdravstveniKarton();
             zk.imePacijenta = ime;
             zk.prezimePacijenta = prezime;
             zk.KrvnaGrupa = krvnaGrupa.ToString();
 
             //slika?? convert iz SoftwareBitmapSource -> byte[]
 
-            using (var db = new PoliklinikaDbContext())
-            {
-                db.ZdravstveniKartoni.Add(zk);
-                db.SaveChanges();
+           
+                RegistrovaniPacijent p = new RegistrovaniPacijent(ime, prezime, DateTime.Now, "proba");
+
+
+                using (var db = new PoliklinikaDbContext())
+                {
+                    db.ZdravstveniKartoni.Add(zk);
+                    db.RegistrovaniPacijenti.Add(p);
+                    db.SaveChanges();
+                }
+
+                var dialog = new MessageDialog("Uspješno kreiran karton", "Poliklinika Concordia");
+
+                await dialog.ShowAsync();
             }
+            
         }
 
         //callback funkcija kad se uslika

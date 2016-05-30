@@ -102,19 +102,21 @@ namespace PoliklinikaMigrations
 
             builder.Entity("Poliklinika.PoliklinikaMVVM.Models.RegistrovaniPacijent", b =>
             {
-                b.Property<int>("RegPacijentId")
+                b.Property<int>("RegistrovaniPacijentId")
                     .ValueGeneratedOnAdd();
+
                 b.Property<string>("ime");
 
                 b.Property<string>("prezime");
 
                 b.Property<DateTime>("datumRodjenja");
+                b.Property<DateTime>("datumRegistracije");
 
                 b.Property<string>("JMBG");
                 b.Property<string>("username");
                 b.Property<string>("password");
 
-                b.Key("RegPacijentId");
+                b.Key("RegistrovaniPacijentId");
             });
 
             builder.Entity("Poliklinika.PoliklinikaMVVM.Models.Odjel", b =>

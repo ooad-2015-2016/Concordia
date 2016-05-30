@@ -55,7 +55,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 
         private async void kreirajClick(object sender, RoutedEventArgs e)
         {
-            ZdravstveniKarton zk = new ZdravstveniKarton();
+           /* ZdravstveniKarton zk = new ZdravstveniKarton();
             zk.imePacijenta = imeTB.Text;
             zk.prezimePacijenta = prezimeTB.Text;
             zk.KrvnaGrupa = krvnaGrupaCB.SelectionBoxItem.ToString();

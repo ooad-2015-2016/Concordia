@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaMVVM.Models
 {
-   public class Pacijent
+   public class Pacijent 
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int PacijentId { get; set; }
@@ -26,6 +26,10 @@ namespace Poliklinika.PoliklinikaMVVM.Models
         }
 
         public string dajNaziv() { return ime + " " + prezime; }
+
+       
+            
+        
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
 using Poliklinika.PoliklinikaMVVM.Helper;
+using Poliklinika.PoliklinikaMVVM.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
         public ListaPacijenataViewModel Parent2 { get; set; }
         public RasporedViewModel Parent3 { get; set; }
         public ZdravstveniKarton Karton { get; set; }
+        public RegistrovaniPacijent Pacijent { get; set; }
         public string naziv { get; set; }
         public ICommand zatvori { get; set; }
 
@@ -34,8 +36,14 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                 {
                     if (z.imePacijenta.Equals(parent.pomoc) && z.prezimePacijenta.Equals(parent.pomoc2)) Karton = z;
                 }
-                //Karton = db.ZdravstveniKartoni.First(a => a.imePacijenta.Equals(parent.pomoc) && a.prezimePacijenta.Equals(parent.pomoc2));
+                Karton = db.ZdravstveniKartoni.First(a => a.imePacijenta.Equals(parent.pomoc) && a.prezimePacijenta.Equals(parent.pomoc2));
                 if (Karton.imePacijenta == null) naziv = "Nema kreiran karton!";
+
+
+              /*  foreach (RegistrovaniPacijent p in db.RegPacijenti)
+                {
+                    if (p.ime.Equals(parent.pomoc) && p.prezime.Equals(parent.pomoc2)) Pacijent=p;
+                }*/
             }
 
         }

@@ -38,6 +38,9 @@
     <RootPropertyPathName Name="zatvori" />
     <RootPropertyPathName Name="Karton" />
     <RootPropertyPathName Name="historijaPretraga" />
+    <RootPropertyPathName Name="Pacijent" />
+    <RootPropertyPathName Name="datumRegistracije" />
+    <RootPropertyPathName Name="datumRodjenja" />
     <RootPropertyPathName Name="KrvnaGrupa" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -186,6 +189,7 @@
     <RootType FullName="Poliklinika.PoliklinikaMVVM.Views.KreiranjeKartona" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />

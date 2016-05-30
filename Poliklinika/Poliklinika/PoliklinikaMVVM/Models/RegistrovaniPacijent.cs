@@ -10,8 +10,8 @@ namespace Poliklinika.PoliklinikaMVVM.Models
     public class RegistrovaniPacijent : Pacijent
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RegPacijentId { get; set; }
-        public DateTime datumRegistracije { get; set; }
+        public int RegistrovaniPacijentId { get; set; }
+        public DateTime? datumRegistracije { get; set; }
         public string username { get; set; }
         public int password { get; set; }
 
@@ -22,8 +22,6 @@ namespace Poliklinika.PoliklinikaMVVM.Models
             password = new Random().Next(10000, 99999);
         }
 
-        public RegistrovaniPacijent()
-        {
-        }
+        
     }
 }

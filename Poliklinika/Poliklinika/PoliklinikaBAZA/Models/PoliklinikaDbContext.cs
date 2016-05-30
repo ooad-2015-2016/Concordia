@@ -15,7 +15,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
       
         public DbSet<ZdravstveniKarton> ZdravstveniKartoni { get; set; }
         public DbSet<Pacijent> Pacijenti { get; set; }
-        public DbSet<RegistrovaniPacijent> RegPacijenti { get; set; }
+        public DbSet<RegistrovaniPacijent> RegistrovaniPacijenti { get; set; }
         public DbSet<OstaloOsoblje> Zaposlenici { get; set; }
         public DbSet<Doktor> Doktori { get; set; }
         public DbSet<Pregled> Pregledi { get; set; }
@@ -25,7 +25,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "PoliklinikaConcordiaDB.db";
+            string databaseFilePath = "Concordia-Baza.db";
             try
             {
                databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path,

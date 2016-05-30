@@ -84,7 +84,7 @@ namespace PoliklinikaMigrations
                 name: "RegistrovaniPacijent",
                 columns: table => new
                 {
-                    RegPacijentId = table.Column(type: "INTEGER", nullable: false),
+                    RegistrovaniPacijentId = table.Column(type: "INTEGER", nullable: false),
                     ime = table.Column(type: "TEXT", nullable: true),
                     prezime = table.Column(type: "TEXT", nullable: true),
                     datumRodjenja = table.Column(type: "TEXT", nullable: true),
@@ -96,7 +96,7 @@ namespace PoliklinikaMigrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RegPacijent", x => x.RegPacijentId);
+                    table.PrimaryKey("PK_RegistrovaniPacijent", x => x.RegistrovaniPacijentId);
                 });
 
             migration.CreateTable(

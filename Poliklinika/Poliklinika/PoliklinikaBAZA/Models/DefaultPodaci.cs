@@ -53,7 +53,8 @@ namespace Poliklinika.PoliklinikaBAZA.Models
                     Ime = "Admin",
                     Prezime = "Admin",
                     Username = "admin",
-                    Password = "1234"
+                    Password = "1234",
+                    tip="administrator"
 
                 },
                 new OstaloOsoblje()
@@ -61,7 +62,8 @@ namespace Poliklinika.PoliklinikaBAZA.Models
                     Ime = "Recepcionist",
                     Prezime = "Recepcionist",
                     Username = "recepcionist",
-                    Password = "1234"
+                    Password = "1234",
+                    tip = "recepcionist"
 
                 },
                 new OstaloOsoblje()
@@ -69,7 +71,9 @@ namespace Poliklinika.PoliklinikaBAZA.Models
                     Ime = "Blagajnik",
                     Prezime = "Blagajnik",
                     Username = "blagajnik",
-                    Password = "1234"
+                    Password = "1234",
+                    tip = "blagajnik"
+
                 }
                 );
                 context.SaveChanges();

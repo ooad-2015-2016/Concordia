@@ -27,11 +27,11 @@
                     <TextBlock Name="krvagrupaPacijenta" FontSize="18" Text="{Binding Path=Karton.KrvnaGrupa}"></TextBlock>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontWeight="Bold" FontSize="13">Datum rođenja:</TextBlock>
-                        <TextBlock Name="datumRođenja" Text="05.maj 1988." FontSize="13" ></TextBlock>
+                        <TextBlock Name="datumRođenja" Text="{Binding Path=Pacijent.datumRodjenja}" FontSize="13" ></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock FontWeight="Bold" FontSize="13">Datum kreiranja kartona:</TextBlock>
-                        <TextBlock Name="datumRegistracije" Text="05.maj 2016." FontSize="13"></TextBlock>
+                        <TextBlock Name="datumRegistracije" Text="{Binding Path=Pacijent.datumRegistracije}" FontSize="13"></TextBlock>
                     </StackPanel>
                     <TextBlock Text="Historija pretraga" Margin="0,20,10,0" FontWeight="Bold"/>
                     <ListView FontFamily="Consolas" ItemsSource="{Binding Path=Karton.historijaPretraga}">

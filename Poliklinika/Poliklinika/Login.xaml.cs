@@ -60,19 +60,37 @@ namespace Poliklinika
                         pom = "d";
                     }
                 }
+
+                bool pronadjen = false;
                 foreach (OstaloOsoblje o in db.Zaposlenici)
                 {
+                    if(o.Username.Equals(txtUsername.Text)) pronadjen = true;
+
                     if (o.Username.Equals(txtUsername.Text) && o.Password.Equals(txtPassword.Password))
                     {
-                       
+                        
                         if (o.tip.Equals("administrator")) pom = "a";
-                        if (o.tip.Equals("blagajnik")) pom = "b";
-                        if (o.tip.Equals("recepcionist")) pom = "r";
+                        else if (o.tip.Equals("blagajnik")) pom = "b";
+                        else if (o.tip.Equals("recepcionist")) pom = "r";
 
                     }
+                  
                 }
 
-               
+                if (pronadjen == true && pom=="n")
+                {
+                    var dialog = new MessageDialog("Pogrešna šifra!", "Neuspješna prijava");
+
+                    await dialog.ShowAsync();
+                }
+                else if(pronadjen==false && pom=="n")
+                {
+                    var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna prijava");
+
+                    await dialog.ShowAsync();
+                }
+
+
             }
 
             if (pom == "a")
