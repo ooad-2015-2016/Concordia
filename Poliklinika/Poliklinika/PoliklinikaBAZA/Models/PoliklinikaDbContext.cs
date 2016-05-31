@@ -25,7 +25,7 @@ namespace Poliklinika.PoliklinikaBAZA.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string databaseFilePath = "Concordia-Baza.db";
+            string databaseFilePath = "Concordia-DataBase.db";
             try
             {
                databaseFilePath = Path.Combine(ApplicationData.Current.LocalFolder.Path,

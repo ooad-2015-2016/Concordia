@@ -33,9 +33,22 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             {
                 foreach (Pregled p in db.Pregledi)
                 {
-                    if (!(p.status.Equals("obavljen"))){
+                    if (!(p.status.Equals("obavljen"))) {
                         string s;
                         s = p.termin.Date.ToString();
+
+                        foreach (ZdravstveniKarton z in db.ZdravstveniKartoni)
+                        {
+                            if (p.zdKartonId.Equals(z.ZdravstveniKartonId)){
+                                
+                                        s += (" - " + z.imePacijenta + " " + z.prezimePacijenta);
+                                    
+                                
+                            }
+
+                        }
+
+                        
 
                         foreach (Pacijent k in db.Pacijenti)
                         {
@@ -45,6 +58,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                             }
                         }
 
+                        
                         foreach (Odjel o in db.Odjeli)
                         {
                             if (o.OdjelId.Equals(p.odjelId))

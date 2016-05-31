@@ -10,21 +10,21 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 {
     class DnevniRasporedViewModel
     {
-        public ZakazaniPregledi parent1 { get; set; }
+     //   public ZakazaniPregledi parent1 { get; set; }
      //   public ZakazaniPreglediBlagajnik parent2 { get; set; }
      //   public ZakazaniPreglediRecepcionista parent3 { get; set; }
         public INavigationService NavigationService { get; set; }
         public ICommand Zatvori { get; set; }
 
 
-        public DnevniRasporedViewModel(ZakazaniPregledi parent)
+       /* public DnevniRasporedViewModel(ZakazaniPregledi parent)
         {
 
             NavigationService = new NavigationService();
             Zatvori = new RelayCommand<object>(zatvoriRaspored, mozeLi);
             this.parent1 = parent;
 
-        }
+        }*/
 
         public DnevniRasporedViewModel()
         {
@@ -51,7 +51,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
          }*/
         public void zatvoriRaspored(object parametar)
         {
-            parent1.NavigationService.GoBack();
+           // parent1.NavigationService.GoBack();
         }
         public bool mozeLi(object parametar)
         {

@@ -48,9 +48,12 @@ namespace Poliklinika
                 var customer = db.Zaposlenici.First(c => c.OstaloOsobljeId == 5);
                 db.Remove(customer);
                 db.SaveChanges();*/
-               
+
+                
 
             }
+
+
         }
 
         /// <summary>

@@ -45,8 +45,8 @@
                     <TextBox x:ConnectionId='5' Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding pomoc2, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
                     <TextBox x:ConnectionId='6' Name="odjelTB" PlaceholderText="Odjel" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding pomoc3, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
                     <StackPanel Orientation="Horizontal" >
-                        <Button x:ConnectionId='9' Name="dodajPretraguB" Margin="0,10,0,0" Command="{Binding Path=DodavanjePretrage, UpdateSourceTrigger=PropertyChanged}" Content="Unesi pretragu" Width="245" Height="32" />
-                        <Button x:ConnectionId='10' Name="ucitajKartonB"  Margin="10,10,0,0" Command="{Binding Path=PregledKartona, UpdateSourceTrigger=PropertyChanged}"  Content="Učitaj karton" Width="245" />
+                        <Button x:ConnectionId='10' Name="dodajPretraguB" Margin="0,10,0,0" Command="{Binding Path=DodavanjePretrage, UpdateSourceTrigger=PropertyChanged}" Content="Unesi pretragu" Width="245" Height="32" />
+                        <Button x:ConnectionId='11' Name="ucitajKartonB"  Margin="10,10,0,0" Command="{Binding Path=PregledKartona, UpdateSourceTrigger=PropertyChanged}"  Content="Učitaj karton" Width="245" />
                     </StackPanel>
 
                     <TextBlock Text="Obavljene pretrage " Margin="10,20,10,0" FontWeight="Bold"/>
@@ -83,6 +83,9 @@
                     </ListView>
 
                     <Button x:ConnectionId='8' Name="zavrsenPregledB" Content="Završen pregled" Command="{Binding Path=ZavrsenPregled, UpdateSourceTrigger=PropertyChanged}" Width="500" ></Button>
+                    <TextBlock></TextBlock>
+                    <Button x:ConnectionId='9' Name="izlazB" Content="Izlaz" Command="{Binding Path=Izlaz, UpdateSourceTrigger=PropertyChanged}" Width="500" ></Button>
+
                 </StackPanel>
             </Border>
         </StackPanel>

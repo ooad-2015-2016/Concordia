@@ -9,8 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
-
+using Windows.UI.Popups;
 
 namespace Poliklinika.PoliklinikaMVVM.ViewModels
 {
@@ -33,6 +32,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             ukupnaCijena = 0;
 
             int id=0;
+            int ZKid = 0;
             using (var db = new PoliklinikaDbContext())
             {
 
@@ -43,15 +43,23 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                         id = w.PacijentId;
                     }
                 }
-                
+
+                foreach (ZdravstveniKarton w in db.ZdravstveniKartoni)
+                {
+                    if (w.imePacijenta.Equals(ime) && w.prezimePacijenta.Equals(prezime))
+                    {
+                        ZKid = w.ZdravstveniKartonId;
+                    }
+                }
+
                 //provjeriti
                 foreach (Racun r in db.Racuni)
                 {
-                    if(r.status=="nije placen")
+                    if(r.status.Equals("nije placen"))
                     {
                         foreach (Pregled p in db.Pregledi)
                         {
-                            if (p.PregledId.Equals(r.pregledId) && p.pacijentId.Equals(id))
+                            if (p.PregledId.Equals(r.pregledId) && (p.pacijentId.Equals(id) || p.zdKartonId.Equals(ZKid)))
                             {
                                 parent.idRacuna = r.RacunId;
 
@@ -89,11 +97,13 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
           
         }
 
-        public void zatvori(object parametar)
+        public async void zatvori(object parametar)
         {
 
             Parent.poruka = "Ukupna cijena je " + ukupnaCijena.ToString() + "KM";
+
             
+
             Parent.NavigationService.GoBack();
         }
 

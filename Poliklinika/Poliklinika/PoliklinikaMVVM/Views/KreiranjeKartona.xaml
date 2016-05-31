@@ -10,6 +10,7 @@
 
     <Page.Resources>
         <c:PictureConverter x:Key="thePictureConverter"/>
+        <c:DateConverter x:Key="theDateConverter"/>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -30,21 +31,16 @@
                 <StackPanel HorizontalAlignment="Center" >
                     <TextBox Name="imeTB" PlaceholderText="Ime pacijenta" Foreground="Salmon" Margin="0,30,10,0" Width="500" Text="{Binding ime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
                     <TextBox Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding prezime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
-                    <ComboBox Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" SelectedValue="{Binding krvnaGrupa,
-Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
-                        <ComboBoxItem>A+</ComboBoxItem>
-                        <ComboBoxItem>A-</ComboBoxItem>
-                        <ComboBoxItem>B+</ComboBoxItem>
-                        <ComboBoxItem>B-</ComboBoxItem>
-                        <ComboBoxItem>AB+</ComboBoxItem>
-                        <ComboBoxItem>AB-</ComboBoxItem>
-                        <ComboBoxItem>0+</ComboBoxItem>
-                        <ComboBoxItem>0-</ComboBoxItem>
+                    <TextBox Name="jmbgTB" PlaceholderText="JMBG pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding jmbg, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
+
+                    <ComboBox Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" ItemsSource="{Binding Path=kgrupe}" SelectedValue="{Binding Path=krvnaGrupa, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                        
                     </ComboBox>
                     <TextBlock>Datum rođenja:</TextBlock>
-                    <DatePicker Name="datumRodjenjaPicker" Width="500"></DatePicker>
+                    <DatePicker Name="datumRodjenjaPicker" Width="500" Date="{Binding datumRodjenja,
+Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource theDateConverter}}"></DatePicker>
                     <TextBlock>Datum kreiranja kartona:</TextBlock>
-                    <DatePicker Name="datumRegistracijePicker" Width="500"></DatePicker>
+                    <DatePicker Name="datumRegistracijePicker" Width="500" ></DatePicker>
                    
                         
 

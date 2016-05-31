@@ -1,7 +1,9 @@
 ﻿using Poliklinika.PoliklinikaBAZA.Models;
 using Poliklinika.PoliklinikaMVVM.Helper;
 using Poliklinika.PoliklinikaMVVM.Models;
+using Poliklinika.PoliklinikaMVVM.Views;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -17,13 +19,18 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 {
     public class KreiranjeKartonaViewModel : INotifyPropertyChanged
     {
-
+        public INavigationService NavigationService { get; set; }
         public CameraHelper Camera { get; set; }        public ICommand Uslikaj { get; set; }
         public ICommand Dodaj { get; set; }
 
         public string ime { get; set; }
         public string prezime { get; set; }
-        public object krvnaGrupa { get; set; }
+        public string krvnaGrupa { get; set; }
+        public List<string> kgrupe { get; set; }
+        public string jmbg { get; set; }
+
+        public DateTime datumRodjenja { get; set; }
+        public DateTime datumRegistracije { get; set; }
 
         public byte[] slicica { get; set; }
 
@@ -48,7 +55,21 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             Camera.InitializeCameraAsync();
 
             Uslikaj = new RelayCommand<object>(uslikaj, (object parametar) => true);
+            NavigationService = new NavigationService();
             Dodaj = new RelayCommand<object>(dodaj, (object parametar) => true);
+            datumRodjenja = new DateTime();
+            datumRegistracije = new DateTime();
+
+            kgrupe = new List<string>();
+            kgrupe.Add("A+");
+            kgrupe.Add("B+");
+            kgrupe.Add("AB+");
+            kgrupe.Add("A-");
+            kgrupe.Add("B-");
+            kgrupe.Add("AB-");
+            kgrupe.Add("0+");
+            kgrupe.Add("0-");
+            
         }
         //komanda koja inicira slikanje
         public async void uslikaj(object parametar)
@@ -58,9 +79,16 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
         public async void dodaj(object parametar)
         {
-            if (ime == "" || prezime == "" || krvnaGrupa == null)
+            if (ime == "" || prezime == "" || krvnaGrupa == null || jmbg=="")
             {
                 var dialog1 = new MessageDialog("Nisu uneseni svi podaci", "Poliklinika Concordia");
+
+                await dialog1.ShowAsync();
+            }
+
+           else if(!IsAllDigits(jmbg) || jmbg.Length != 11)
+            {
+                var dialog1 = new MessageDialog("JMBG mora sadrzavati 11 numeričkih znakova!", "Poliklinika Concordia");
 
                 await dialog1.ShowAsync();
             }
@@ -69,12 +97,20 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                 ZdravstveniKarton zk = new ZdravstveniKarton();
             zk.imePacijenta = ime;
             zk.prezimePacijenta = prezime;
-            zk.KrvnaGrupa = krvnaGrupa.ToString();
 
-            //slika?? convert iz SoftwareBitmapSource -> byte[]
+                zk.KrvnaGrupa = krvnaGrupa;
 
-           
-                RegistrovaniPacijent p = new RegistrovaniPacijent(ime, prezime, DateTime.Now, "proba");
+                //slika?? convert iz SoftwareBitmapSource -> byte[]
+
+                
+                RegistrovaniPacijent p = new RegistrovaniPacijent(ime, prezime, datumRodjenja, jmbg);
+                TimeSpan ts = new TimeSpan(0, 0, 0);
+
+                datumRegistracije = DateTime.Now;
+                datumRegistracije=datumRegistracije.Date + ts;
+                p.datumRegistracije = datumRegistracije;
+                p.datumRodjenja = p.datumRodjenja.Date + ts;
+               
 
 
                 using (var db = new PoliklinikaDbContext())
@@ -86,9 +122,25 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
 
                 var dialog = new MessageDialog("Uspješno kreiran karton", "Poliklinika Concordia");
 
+                NavigationService.Navigate(typeof(RecepcionistMenu));
+
                 await dialog.ShowAsync();
+
+                
             }
+
             
+            
+        }
+
+        bool IsAllDigits(string s)
+        {
+            foreach (char c in s)
+            {
+                if (!char.IsDigit(c))
+                    return false;
+            }
+            return true;
         }
 
         //callback funkcija kad se uslika

@@ -28,31 +28,41 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             //Odjel.naziv = parent.pomoc3;
 
             pretrage = new List<Pretraga>();
-
+            MogucePretrage mogucePretrage = new MogucePretrage();
             //prema nazivu odjela povuci iz bazee sve pretrage
             if (parent.pomoc3.Equals("dermatologija"))
             {
-                pretrage.Add(new Pretraga("hemijski piling", 123));
-                pretrage.Add(new Pretraga("ciscenje lica", 11));
+                pretrage = mogucePretrage.pretrageDermatologija();
+            }
+            else if (parent.pomoc3.Equals("ginekologija"))
+            {
+                pretrage = mogucePretrage.pretrageGinekologija();
+            }
+            else if(parent.pomoc3.Equals("interna medicina"))
+            {
+                pretrage = mogucePretrage.pretrageInterna();
+            }
+            else if(parent.pomoc3.Equals("gastroenterologija"))
+            {
+                pretrage = mogucePretrage.pretrageGastroenterologija();
             }
             else if (parent.pomoc3.Equals("porodicna medicina"))
             {
-                pretrage.Add(new Pretraga("p1", 123));
-                pretrage.Add(new Pretraga("p2", 11));
+                pretrage = mogucePretrage.pretragePorodicna();
             }
+            
 
             Dodaj = new RelayCommand<object>(dodaj, mozeLiDodati);
-            //odabrana stavka sa default komponentom, combobox ce da mjenja Stavka.Komponenta
             Stavka = new Pretraga();
             Stavka = pretrage[0];
-
-            pr = parent.prId;
+            Stavka.pregledId = parent.prId;
+   
         }
 
         public void dodaj(object parametar)
         {
             Parent.Pregled.pretrage.Add(Stavka);
-            Stavka.pregledId = pr;
+            Stavka.pregledId = Parent.prId;
 
             using (var db = new PoliklinikaDbContext())
             {

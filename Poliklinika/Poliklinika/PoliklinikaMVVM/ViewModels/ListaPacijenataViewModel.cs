@@ -15,21 +15,21 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
     {
         public ICommand PregledKartona { get; set; }
         public INavigationService NavigationService { get; set; }
-        public Pacijent odabrani { get; set; }
-        public List<Pacijent> pacijenti { get; set; }
+        public RegistrovaniPacijent odabrani { get; set; }
+        public List<RegistrovaniPacijent> pacijenti { get; set; }
 
         public ListaPacijenataViewModel()
         {
 
             NavigationService = new NavigationService();
             PregledKartona = new RelayCommand<object>(pregledKartona, mozeLi);
-            pacijenti = new List<Pacijent>();
+            pacijenti = new List<RegistrovaniPacijent>();
 
             using (var db = new PoliklinikaDbContext())
             {
-                foreach(ZdravstveniKarton z in db.ZdravstveniKartoni)
+                foreach(RegistrovaniPacijent z in db.RegistrovaniPacijenti)
                 {
-                    pacijenti.Add(new Pacijent(z.imePacijenta, z.prezimePacijenta, DateTime.Now, "randomjmbg"));
+                    pacijenti.Add(z);
                 }
             }
 

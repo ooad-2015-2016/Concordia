@@ -103,7 +103,7 @@ namespace PoliklinikaMigrations
             builder.Entity("Poliklinika.PoliklinikaMVVM.Models.RegistrovaniPacijent", b =>
             {
                 b.Property<int>("RegistrovaniPacijentId")
-                    .ValueGeneratedOnAdd();
+                   .ValueGeneratedOnAdd();
 
                 b.Property<string>("ime");
 

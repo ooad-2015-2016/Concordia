@@ -10,6 +10,7 @@
 
     <Page.Resources>
         <c:PictureConverter x:Key="thePictureConverter"/>
+        <c:DateConverter x:Key="theDateConverter"/>
     </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -30,36 +31,31 @@
                 <StackPanel HorizontalAlignment="Center" >
                     <TextBox x:ConnectionId='1' Name="imeTB" PlaceholderText="Ime pacijenta" Foreground="Salmon" Margin="0,30,10,0" Width="500" Text="{Binding ime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
                     <TextBox x:ConnectionId='2' Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding prezime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
-                    <ComboBox x:ConnectionId='3' Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" SelectedValue="{Binding krvnaGrupa,
-Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
-                        <ComboBoxItem>A+</ComboBoxItem>
-                        <ComboBoxItem>A-</ComboBoxItem>
-                        <ComboBoxItem>B+</ComboBoxItem>
-                        <ComboBoxItem>B-</ComboBoxItem>
-                        <ComboBoxItem>AB+</ComboBoxItem>
-                        <ComboBoxItem>AB-</ComboBoxItem>
-                        <ComboBoxItem>0+</ComboBoxItem>
-                        <ComboBoxItem>0-</ComboBoxItem>
+                    <TextBox x:ConnectionId='3' Name="jmbgTB" PlaceholderText="JMBG pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding jmbg, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
+
+                    <ComboBox x:ConnectionId='4' Name="krvnaGrupaCB" PlaceholderText="Krvna grupa" Margin="0,10,0,0"  Width="500" ItemsSource="{Binding Path=kgrupe}" SelectedValue="{Binding Path=krvnaGrupa, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" >
+                        
                     </ComboBox>
                     <TextBlock>Datum rođenja:</TextBlock>
-                    <DatePicker x:ConnectionId='4' Name="datumRodjenjaPicker" Width="500"></DatePicker>
+                    <DatePicker x:ConnectionId='5' Name="datumRodjenjaPicker" Width="500" Date="{Binding datumRodjenja,
+Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource theDateConverter}}"></DatePicker>
                     <TextBlock>Datum kreiranja kartona:</TextBlock>
-                    <DatePicker x:ConnectionId='5' Name="datumRegistracijePicker" Width="500"></DatePicker>
+                    <DatePicker x:ConnectionId='6' Name="datumRegistracijePicker" Width="500" ></DatePicker>
                    
                         
 
 
                     <StackPanel Orientation="Horizontal">
 
-                        <CaptureElement x:ConnectionId='8' Name="PreviewControl" Source="{Binding Path=Camera.MediaCapture,Mode=TwoWay}"
+                        <CaptureElement x:ConnectionId='9' Name="PreviewControl" Source="{Binding Path=Camera.MediaCapture,Mode=TwoWay}"
 Stretch="Uniform" Width="240" Margin="5,5,5,5" />
-                        <Image x:ConnectionId='9' Name="SlikaControl" HorizontalAlignment="Center" Margin="5,5,5,5" 
+                        <Image x:ConnectionId='10' Name="SlikaControl" HorizontalAlignment="Center" Margin="5,5,5,5" 
 VerticalAlignment="Center" Source="{Binding Slika}"  Width="240" />
                         
                     </StackPanel>
-                    <Button x:ConnectionId='6' Name="dodajSliku" Content="Uslikaj" Command="{Binding Path=Uslikaj}" Margin="0,10,0,0" Width="500">
+                    <Button x:ConnectionId='7' Name="dodajSliku" Content="Uslikaj" Command="{Binding Path=Uslikaj}" Margin="0,10,0,0" Width="500">
                     </Button>
-                    <Button x:ConnectionId='7' Name="kreirajKartonB" Content="Kreiraj karton" Command="{Binding Path=Dodaj}" Width="500" Margin="0,20,0,0"  ></Button>
+                    <Button x:ConnectionId='8' Name="kreirajKartonB" Content="Kreiraj karton" Command="{Binding Path=Dodaj}" Width="500" Margin="0,20,0,0"  ></Button>
                 </StackPanel>
             </Border>
         </StackPanel>

@@ -48,78 +48,104 @@ namespace Poliklinika.PoliklinikaMVVM.Views
 
         private async void dodavanjeZaposlenika(object sender, RoutedEventArgs e)
         {
-
-            string odabrano = odjelCBZ.SelectedValue.ToString();
-
-            if(odabrano.Equals("blagajnik") || odabrano.Equals("recepcionist") || odabrano.Equals("administrator"))
+            
+            if (imeTBZ.Text == "" || prezimeTBZ.Text == "" || plataTBZ.Text == ""  || usernameTBZ.Text == "")
             {
-                OstaloOsoblje zap = new OstaloOsoblje();
-                zap.Ime = imeTBZ.Text;
-                zap.Prezime = prezimeTBZ.Text;
-                zap.Plata = float.Parse(plataTBZ.Text);
-                zap.DatumRodjenja = datumRodjenjaPickerZ.Date.Date;
-                zap.DatumZaposlenja = datumRegistracijePickerZ.Date.Date;
-                zap.Username = usernameTBZ.Text;
-                zap.tip = odabrano;
+                var dialog3 = new MessageDialog("Nisu uneseni svi podaci!", "Poliklinika Concordia");
 
-                using (var db = new PoliklinikaDbContext())
-                {
-                    db.Zaposlenici.Add(zap);
-                    db.SaveChanges();
-                }
+                await dialog3.ShowAsync();
+            }
+            else if (IsAllDigits(plataTBZ.Text))
+            {
+                var dialog3 = new MessageDialog("Nije validan unos plate!", "Poliklinika Concordia");
 
-                var dlg = new MessageDialog("Uspješno registrovan doktor!" + "\n" + "Username: " + odabrano + "\n" + "Password: " + zap.Password
-              );
-                dlg.Commands.Add(new UICommand("Ok", null, "OK"));
-                var op = await dlg.ShowAsync();
-
+                await dialog3.ShowAsync();
             }
 
             else
             {
-                Doktor zap = new Doktor();
-                zap.Ime = imeTBZ.Text;
-                zap.Prezime = prezimeTBZ.Text;
-                zap.Plata = float.Parse(plataTBZ.Text);
-                zap.Username = usernameTBZ.Text;
-
-                int id;
-
-                using (var db = new PoliklinikaDbContext())
+                try
                 {
-                    var binky = db.Odjeli.Where(u => u.naziv == odabrano).FirstOrDefault();
-                    id = binky.OdjelId;
+                    string odabrano = odjelCBZ.SelectedValue.ToString();
+
+                    if (odabrano.Equals("blagajnik") || odabrano.Equals("recepcionist") || odabrano.Equals("administrator"))
+                    {
+                        OstaloOsoblje zap = new OstaloOsoblje();
+                        zap.Ime = imeTBZ.Text;
+                        zap.Prezime = prezimeTBZ.Text;
+                        zap.Plata = float.Parse(plataTBZ.Text);
+                        zap.DatumRodjenja = datumRodjenjaPickerZ.Date.Date;
+                        zap.DatumZaposlenja = datumRegistracijePickerZ.Date.Date;
+                        zap.Username = usernameTBZ.Text;
+                        zap.tip = odabrano;
+
+                        using (var db = new PoliklinikaDbContext())
+                        {
+                            db.Zaposlenici.Add(zap);
+                            db.SaveChanges();
+                        }
+
+                        var dlg = new MessageDialog("Uspješno registrovan doktor!" + "\n" + "Username: " + odabrano + "\n" + "Password: " + zap.Password
+                      );
+                        dlg.Commands.Add(new UICommand("Ok", null, "OK"));
+                        var op = await dlg.ShowAsync();
+
+                    }
+
+                    else
+                    {
+                        Doktor zap = new Doktor();
+                        zap.Ime = imeTBZ.Text;
+                        zap.Prezime = prezimeTBZ.Text;
+                        zap.Plata = float.Parse(plataTBZ.Text);
+                        zap.Username = usernameTBZ.Text;
+
+                        int id;
+
+                        using (var db = new PoliklinikaDbContext())
+                        {
+                            var binky = db.Odjeli.Where(u => u.naziv == odabrano).FirstOrDefault();
+                            id = binky.OdjelId;
+                        }
+
+
+                        zap.odjelId = id;
+
+                        using (var db = new PoliklinikaDbContext())
+                        {
+                            db.Doktori.Add(zap);
+                            db.SaveChanges();
+                        }
+
+                        var dlg = new MessageDialog("Uspješno registrovan doktor!" + "\n" + "Username: " + odabrano + "\n" + "Password: " + zap.Password
+                       );
+                        dlg.Commands.Add(new UICommand("Ok", null, "OK"));
+                        var op = await dlg.ShowAsync();
+                    }
+                }
+                catch (Exception)
+                {
+                    var dialog3 = new MessageDialog("Nije odabran tip zaposlenika!", "Poliklinika Concordia");
+
+                    await dialog3.ShowAsync();
                 }
 
-            
-                zap.odjelId = id;
 
-                using (var db = new PoliklinikaDbContext())
-                {
-                    db.Doktori.Add(zap);
-                    db.SaveChanges();
-                }
 
-                var dlg = new MessageDialog("Uspješno registrovan doktor!" + "\n" + "Username: " + odabrano + "\n" + "Password: " + zap.Password
-               );
-                dlg.Commands.Add(new UICommand("Ok", null, "OK"));
-                var op = await dlg.ShowAsync();
             }
-
-            
-
-            
-
-
            
-            /*
-            using (var db = new PoliklinikaDbContext())
+          
+
+        }
+
+        bool IsAllDigits(string s)
+        {
+            foreach (char c in s)
             {
-                db.Zaposlenici.Add(zap);
-                db.SaveChanges();
-            }*/
-
-
+                if (!char.IsDigit(c))
+                    return false;
+            }
+            return true;
         }
     }
 }

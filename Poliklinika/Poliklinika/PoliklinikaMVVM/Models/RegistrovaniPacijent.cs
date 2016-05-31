@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Poliklinika.PoliklinikaMVVM.Models
 {
-    public class RegistrovaniPacijent : Pacijent
+    public class RegistrovaniPacijent : PacijentA
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RegistrovaniPacijentId { get; set; }
@@ -20,6 +20,10 @@ namespace Poliklinika.PoliklinikaMVVM.Models
             int br = new Random().Next(1000, 9999);
             username = prezime + Convert.ToString(br);
             password = new Random().Next(10000, 99999);
+        }
+        public RegistrovaniPacijent()
+        {
+
         }
 
         

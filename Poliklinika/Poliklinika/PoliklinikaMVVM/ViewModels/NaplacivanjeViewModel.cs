@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace Poliklinika.PoliklinikaMVVM.ViewModels
 {
@@ -40,22 +41,26 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             
         }
 
-        public void placenRacun(object parametar)
+        public async void placenRacun(object parametar)
         {
             Racun he = new Racun();
 
             using (var db = new PoliklinikaDbContext())
             {
                 he = db.Racuni.Where(s => s.RacunId == idRacuna).FirstOrDefault<Racun>();
-                he.status = "plaćen";
+                he.status = "placen";
             }
             using (var d = new PoliklinikaDbContext())
-                {
-                    d.Entry(he).State = EntityState.Modified;
-                    d.SaveChanges();
-                }
-            
-                NavigationService.Navigate(typeof(BlagajnikMenu));
+            {
+                d.Entry(he).State = EntityState.Modified;
+                d.SaveChanges();
+            }
+
+            var dialog3 = new MessageDialog("Placen pregled!", "Poliklinika Concordia");
+
+            await dialog3.ShowAsync();
+
+            NavigationService.Navigate(typeof(BlagajnikMenu));
         }
     }
 }

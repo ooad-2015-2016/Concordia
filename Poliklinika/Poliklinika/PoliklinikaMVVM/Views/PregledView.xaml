@@ -83,6 +83,9 @@
                     </ListView>
 
                     <Button Name="zavrsenPregledB" Content="Završen pregled" Command="{Binding Path=ZavrsenPregled, UpdateSourceTrigger=PropertyChanged}" Width="500" ></Button>
+                    <TextBlock></TextBlock>
+                    <Button Name="izlazB" Content="Izlaz" Command="{Binding Path=Izlaz, UpdateSourceTrigger=PropertyChanged}" Width="500" ></Button>
+
                 </StackPanel>
             </Border>
         </StackPanel>

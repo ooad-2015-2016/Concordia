@@ -117,6 +117,7 @@
     <Compile Include="PoliklinikaBAZA\Views\PictureConverter.cs" />
     <Compile Include="PoliklinikaMVVM\DataSource\DataSourceMenuMD.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\CameraHelper.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\DateConverter.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\INavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\NavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\PictureConverter.cs" />
@@ -124,8 +125,10 @@
     <Compile Include="PoliklinikaMVVM\Models\Doktor.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Korisnik.cs" />
     <Compile Include="PoliklinikaMVVM\Models\MeniStavka.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\MogucePretrage.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Odjel.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pacijent.cs" />
+    <Compile Include="PoliklinikaMVVM\Models\PacijentA.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pregled.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Pretraga.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Racun.cs" />
@@ -192,9 +195,6 @@
       <DependentUpon>ZdravstveniKartonView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZakazaniPregledi.xaml.cs">
-      <DependentUpon>ZakazaniPregledi.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -231,7 +231,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="NovcaniPrihodi.xaml">
+    <Page Include="PoliklinikaMVVM\Views\NovcaniPrihodi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -295,11 +295,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StatistickiPodaci.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ZakazaniPregledi.xaml">
+    <Page Include="PoliklinikaMVVM\Views\StatistickiPodaci.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

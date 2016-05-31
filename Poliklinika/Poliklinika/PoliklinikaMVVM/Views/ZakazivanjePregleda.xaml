@@ -4,8 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Poliklinika.PoliklinikaMVVM.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     xmlns:c="using:Poliklinika.PoliklinikaMVVM.Helper"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <c:PictureConverter x:Key="thePictureConverter"/>
+        <c:DateConverter x:Key="theDateConverter"/>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -27,10 +33,16 @@
                     <TextBox Name="imeTB" PlaceholderText="Ime pacijenta"  Foreground="Salmon" Margin="0,30,10,0" Width="500" Text="{Binding ime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center" ></TextBox>
                     <TextBox Name="prezimeTB" PlaceholderText="Prezime pacijenta" Foreground="Salmon" Margin="0,10,10,0" Width="500" Text="{Binding prezime, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Center"  ></TextBox>
                     <TextBox Name="odjelTB" PlaceholderText="Odjel" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding odjel, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
-                    <Button HorizontalAlignment="Center" Name="provjeriTermineB" Command="{Binding Path=PrikaziTermine, UpdateSourceTrigger=PropertyChanged}" Content="Prikazi slobodne termine" Width="500" Margin="0,10,0,0"></Button>
-                    <ListBox Width="500" ItemsSource="{Binding stavke}" SelectedValue="{Binding Path=odabrani,
-Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                    </ListBox>
+                    <TextBlock></TextBlock>
+                    <DatePicker Name="datumPicker" Width="500" Date="{Binding datum,
+Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource theDateConverter}}"></DatePicker>
+                    <TextBlock></TextBlock>
+                    <TextBox PlaceholderText="Termin" Foreground="Salmon" Margin="0,10,10,0" Width="500" HorizontalAlignment="Center" Text="{Binding termin, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" ></TextBox>
+                    
+                    <Button Name="provjeriTermin" Content="Provjeri dostupnost termina" Command="{Binding Path=ProvjeriTermin, UpdateSourceTrigger=PropertyChanged}"  Width="500" Margin="0,10,0,0"  ></Button>
+
+
+
                     <Button HorizontalAlignment="Center" Name="zakaziPregledB" Content="Zakaži pregled" Command="{Binding Path=ZakaziPregled, UpdateSourceTrigger=PropertyChanged}"  Width="500" Margin="0,10,0,0"  ></Button>
                 </StackPanel>
             </Border>
