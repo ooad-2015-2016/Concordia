@@ -118,10 +118,12 @@
     <Compile Include="PoliklinikaMVVM\DataSource\DataSourceMenuMD.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\CameraHelper.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\DateConverter.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\ICommunicateBehaviour.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\INavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\NavigationService.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\PictureConverter.cs" />
     <Compile Include="PoliklinikaMVVM\Helper\RelayCommand.cs" />
+    <Compile Include="PoliklinikaMVVM\Helper\SMSCommunicationHelper.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Doktor.cs" />
     <Compile Include="PoliklinikaMVVM\Models\Korisnik.cs" />
     <Compile Include="PoliklinikaMVVM\Models\MeniStavka.cs" />
