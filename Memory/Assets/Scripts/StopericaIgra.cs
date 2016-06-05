@@ -18,7 +18,7 @@ public class StopericaIgra : MonoBehaviour
        Scene level = SceneManager.GetActiveScene();
         if (level.name == "EasyLevel") vrijeme = 60;
         else if (level.name == "MediumLevel") vrijeme = 40;
-        else if (level.name == "HighLevel") vrijeme = 5;
+        else if (level.name == "HighLevel") vrijeme = 25;
         timerText = GetComponent<Text>() as Text;
 
     }
