@@ -61,11 +61,11 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                         pId = p.PacijentId;
                     }
                 }
-                foreach (RegistrovaniPacijent p in db.RegistrovaniPacijenti)
+                foreach (ZdravstveniKarton p in db.ZdravstveniKartoni)
                 {
-                    if (p.ime.Equals(pomoc) && p.prezime.Equals(pomoc2))
+                    if (p.imePacijenta.Equals(pomoc) && p.prezimePacijenta.Equals(pomoc2))
                     {
-                        ZKId = p.RegistrovaniPacijentId;
+                        ZKId = p.ZdravstveniKartonId;
                     }
                 }
 
@@ -103,11 +103,11 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                                 pId = p.PacijentId;
                             }
                         }
-                        foreach (RegistrovaniPacijent p in db.RegistrovaniPacijenti)
+                        foreach (ZdravstveniKarton p in db.ZdravstveniKartoni)
                         {
-                            if (p.ime.Equals(pomoc) && p.prezime.Equals(pomoc2))
+                            if (p.imePacijenta.Equals(pomoc) && p.prezimePacijenta.Equals(pomoc2))
                             {
-                                ZKId = p.RegistrovaniPacijentId;
+                                ZKId = p.ZdravstveniKartonId;
                             }
                         }
 

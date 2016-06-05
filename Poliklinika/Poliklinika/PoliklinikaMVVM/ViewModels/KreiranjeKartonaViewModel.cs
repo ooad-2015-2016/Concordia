@@ -98,9 +98,10 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
             zk.imePacijenta = ime;
             zk.prezimePacijenta = prezime;
 
-                zk.KrvnaGrupa = krvnaGrupa;
+            zk.KrvnaGrupa = krvnaGrupa;
+            PictureConverter pc = new PictureConverter();
+            zk.Slika = (byte[])pc.Convert(Slika, null, null, null);
 
-                //slika?? convert iz SoftwareBitmapSource -> byte[]
 
                 
                 RegistrovaniPacijent p = new RegistrovaniPacijent(ime, prezime, datumRodjenja, jmbg);

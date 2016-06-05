@@ -36,6 +36,7 @@ namespace Poliklinika.PoliklinikaMVVM.ViewModels
                     if (!(p.status.Equals("obavljen"))) {
                         string s;
                         s = p.termin.Date.ToString();
+                        s = "10:00";
 
                         foreach (ZdravstveniKarton z in db.ZdravstveniKartoni)
                         {

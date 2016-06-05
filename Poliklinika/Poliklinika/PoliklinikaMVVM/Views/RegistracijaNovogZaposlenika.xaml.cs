@@ -142,7 +142,7 @@ namespace Poliklinika.PoliklinikaMVVM.Views
         {
             foreach (char c in s)
             {
-                if (!char.IsDigit(c))
+                if (c>='0' && c<='9')
                     return false;
             }
             return true;

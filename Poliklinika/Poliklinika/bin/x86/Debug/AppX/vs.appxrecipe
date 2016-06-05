@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-05-31T20:15:17.520</Modified>
+      <Modified>2016-06-05T10:18:51.831</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Poliklinika.exe">
       <PackagePath>entrypoint\Poliklinika.exe</PackagePath>
-      <Modified>2016-05-31T20:15:16.975</Modified>
+      <Modified>2016-06-05T10:18:51.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\.nuget\packages\EntityFramework.Core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -598,11 +598,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-05-31T19:36:21.115</Modified>
+      <Modified>2016-06-05T09:44:54.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\amina\Concordia\Poliklinika\Poliklinika\bin\x86\Debug\Core\Poliklinika.exe">
       <PackagePath>Poliklinika.exe</PackagePath>
-      <Modified>2016-05-31T20:15:17.515</Modified>
+      <Modified>2016-06-05T10:18:51.826</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
